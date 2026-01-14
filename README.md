@@ -7,17 +7,7 @@ This tool analyzes your Slice and Dice hero pick rates and generates a modified 
 
 ## 🚀 Quick Start
 
-### Deploy to GitHub Pages
-1. Create a new GitHub repository
-2. Upload all three files: `index.html`, `hero_suffixes.js`, and `README.md`
-3. Go to Settings → Pages
-4. Set Source to "main" branch and root folder
-5. Your analyzer will be live at `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
-
-### Run Locally
-1. Download all files to a folder
-2. Open `index.html` in your web browser
-3. Paste your pick rate JSON data
+### Try it here: https://bokan96.github.io/snd-autobalance/
 
 ## 📊 How It Works
 
