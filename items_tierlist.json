@@ -1,0 +1,2918 @@
+[
+  {
+    "name": "Anchor",
+    "tier": 1,
+    "description": "Start of turn 1: self-shield 1",
+    "grade": "A",
+    "rank": 2,
+    "notes": "Steel/Survivability",
+    "unlock": ""
+  },
+  {
+    "name": "Arrow",
+    "tier": 1,
+    "description": "Replace damage sides with 'Kill an enemy with 2 or less hp ranged'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "Tough Hp/Thorn, Grave etc killer",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Autumn Leaf",
+    "tier": 1,
+    "description": "Add growth to the rightmost side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Balisong",
+    "tier": 1,
+    "description": "Replace the left side with '1 damage cantrip'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "Roulette",
+    "unlock": ""
+  },
+  {
+    "name": "Ballet Shoes",
+    "tier": 1,
+    "description": "Swap the left side with the rightmost side",
+    "grade": "C",
+    "rank": 4,
+    "notes": "Don't pick if weak early",
+    "unlock": "Complete \"Dancer-Pick\" achievement"
+  },
+  {
+    "name": "Barkskin",
+    "tier": 1,
+    "description": "Immune to shields\n+2 hp",
+    "grade": "C",
+    "rank": 4,
+    "notes": "If you need help early",
+    "unlock": ""
+  },
+  {
+    "name": "Basilisk Scale",
+    "tier": 1,
+    "description": "Start petrified for 1\n+3 pips to the top side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "Polearm/Consistent cleanse",
+    "unlock": "Complete \"Petrified\" achievement"
+  },
+  {
+    "name": "Big Heart",
+    "tier": 1,
+    "description": "Replace the middle side with 'Heal 7'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "Clumsy, decent side with some synergys like dogma and enduring",
+    "unlock": ""
+  },
+  {
+    "name": "Big Shield",
+    "tier": 1,
+    "description": "Replace the left side with 'Shield 4'",
+    "grade": "S",
+    "rank": 1,
+    "notes": "Upgrade for many t1s, makes Armorer great, can put on Reds like Disciple, later on Ghast/Doctor",
+    "unlock": ""
+  },
+  {
+    "name": "Bone Charm",
+    "tier": 1,
+    "description": "No hp penalty when defeated",
+    "grade": "A",
+    "rank": 2,
+    "notes": "Pain/Death synergy. Not caring about having a hero die can simplify fights (like thorns)",
+    "unlock": ""
+  },
+  {
+    "name": "Bowl",
+    "tier": 1,
+    "description": "Revert all changes to the middle column\n(Replace middle column with my base middle column)",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Unless Curses",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Castor Root",
+    "tier": 1,
+    "description": "Replace blank sides with 'Heal 1'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Change of Heart",
+    "tier": 1,
+    "description": "Replace heal/selfheal sides with 'basic shield' sides, retaining their original pips and other keywords",
+    "grade": "S",
+    "rank": 1,
+    "notes": "Improves Red t1 immensely, many synergies including Steel",
+    "unlock": "Complete \"Change of Heart\" achievement"
+  },
+  {
+    "name": "Cheating Sleeves",
+    "tier": 1,
+    "description": "Add quin to the top and bottom sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"Ace-Pick\" achievement"
+  },
+  {
+    "name": "Cloak",
+    "tier": 1,
+    "description": "Replace the middle side with 'Dodge all damage and enemy effects this turn'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Dodge vs the Hand/Tarantus but too niche",
+    "unlock": ""
+  },
+  {
+    "name": "Clumsy Shoes",
+    "tier": 1,
+    "description": "Add heavy & eliminate & +1 pip to all targeted sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Maybe if you're super afraid of Floor 4 Troll",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Coin",
+    "tier": 1,
+    "description": "Add fumble & +1 pip to the left side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Statis",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Compass",
+    "tier": 1,
+    "description": "Rotate sides clockwise around the middle side\n(Left side moves to top side, top side moves to right side, right side moves to bottom side and bottom side moves to left side)",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Copper Ring",
+    "tier": 1,
+    "description": "+1 empty hp\n+1 max stored mana",
+    "grade": "B",
+    "rank": 3,
+    "notes": "1 max mana is nice",
+    "unlock": ""
+  },
+  {
+    "name": "Corset",
+    "tier": 1,
+    "description": "Replace the left side with 'blank'\n+1 pip to the middle side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Courage Potion",
+    "tier": 1,
+    "description": "Add potion & +3 pips to the left side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"Herbalist-Pick\" achievement"
+  },
+  {
+    "name": "Doll",
+    "tier": 1,
+    "description": "Replace the left side with the above hero's base side\n-1 pip to the five right sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Doom Blade",
+    "tier": 1,
+    "description": "Replace blank sides with '3 damage death'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Knight tactic",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Emerald Shard",
+    "tier": 1,
+    "description": "Gain the effects of all tier 2 items on other heroes\n(Can copy the effects of items that are exclusive to a certain hero color)",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Golden thread/polearm no longer works",
+    "unlock": "Complete \"Hidden Emerald\" achievement"
+  },
+  {
+    "name": "Fletching",
+    "tier": 1,
+    "description": "Add ranged to the left side",
+    "grade": "D",
+    "rank": 6,
+    "notes": "Maybe spiky/add archer ",
+    "unlock": ""
+  },
+  {
+    "name": "Glass Helm",
+    "tier": 1,
+    "description": "+3 hp\nDeath is permanent",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": "Complete \"Oops+\" achievement"
+  },
+  {
+    "name": "Healing Wand",
+    "tier": 1,
+    "description": "Replace the rightmost side with 'Heal 4 single-use'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Infused Herbs",
+    "tier": 1,
+    "description": "Replace the bottom side with 'Heal 2 cleanse boost manacost'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Boost is better than regen but still doesn't do enough",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Iron Heart",
+    "tier": 1,
+    "description": "Add exert & +1 pip to all sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "Put on any 1 pip hero to get a turn ahead on t1/3. Synergy with Disciple, Hack, Stasis, Inner Str.",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Knife Bag",
+    "tier": 1,
+    "description": "Replace blank sides with '1 damage cantrip, pain'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "Can be picked with lazy/scoundrel protect against evoker low roll",
+    "unlock": "Complete \"Draw\" achievement"
+  },
+  {
+    "name": "Learn Poultice",
+    "tier": 1,
+    "description": "Learn the spell: Poultice (Cost: 1 mana - Heal 2 singleCast)",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Leather Vest",
+    "tier": 1,
+    "description": "+1 hp",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Memory",
+    "tier": 1,
+    "description": "Revert all changes to the left side\n(Replace left side with my base left side)",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Unless Curses (left blank)",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Necromancer Tome",
+    "tier": 1,
+    "description": "You can cast spells from defeated heroes\nReplace the left side with '3 mana pain'",
+    "grade": "A",
+    "rank": 2,
+    "notes": "Roulette and generally good",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Pendulum",
+    "tier": 1,
+    "description": "Swap the left side with the middle side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Pillow",
+    "tier": 1,
+    "description": "Add patient to the left side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Quiver",
+    "tier": 1,
+    "description": "Replace the five right sides with '1 damage ranged'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Reagents",
+    "tier": 1,
+    "description": "Replace the two right sides with 'blank' & 'Heal 1 regen'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "Juggler/Meddler",
+    "unlock": ""
+  },
+  {
+    "name": "Revive Potion",
+    "tier": 1,
+    "description": "Replace the right side with 'Revive the 5 top-most defeated allies potion'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "Juggler/Meddler",
+    "unlock": "Complete \"Herbalist-Pick\" achievement"
+  },
+  {
+    "name": "Rusty Plate",
+    "tier": 1,
+    "description": "Replace the middle side with 'blank'\n+3 hp",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Scar",
+    "tier": 1,
+    "description": "+5 empty hp",
+    "grade": "S",
+    "rank": 1,
+    "notes": "Quite great with Splint, Healer. Many t2 reds.",
+    "unlock": "Complete \"Heal\" achievement"
+  },
+  {
+    "name": "Seedling",
+    "tier": 1,
+    "description": "Replace the left side with '2 damage growth'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sorcery Notes",
+    "tier": 1,
+    "description": "Replace the two left sides with '+1 mana cantrip' & 'blank'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "Clumsy",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Tankard",
+    "tier": 1,
+    "description": "Add acidic to the middle side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Unless item poison",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Tattered Robes",
+    "tier": 1,
+    "description": "Replace the three right sides with '+1 mana'\n+1 max stored mana",
+    "grade": "C",
+    "rank": 4,
+    "notes": "Meddler/Clumsy/Lazy",
+    "unlock": ""
+  },
+  {
+    "name": "Tincture",
+    "tier": 1,
+    "description": "Add cleanse to the rightmost side",
+    "grade": "D",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Titanbane Potion",
+    "tier": 1,
+    "description": "Add dispel & potion to the middle side",
+    "grade": "B",
+    "rank": 3,
+    "notes": "Hexia, Inevitable, Tarantus, Wendigo etc.",
+    "unlock": "Complete \"Herbalist-Pick\" achievement"
+  },
+  {
+    "name": "Trowel",
+    "tier": 1,
+    "description": "Replace the middle side with 'Revive the top-most defeated ally'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Clumsy",
+    "unlock": ""
+  },
+  {
+    "name": "Wand of Wand",
+    "tier": 1,
+    "description": "Replace the left side with '1 damage singleUse inflictsingleUse'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Whey",
+    "tier": 1,
+    "description": "Add vitality to the left side",
+    "grade": "B",
+    "rank": 3,
+    "notes": "Mostly on reds, less useful on grey. Also possible to give enemy max hp for Cruel value and get around \"Last hp traits\" (removes steel pips from Sarcophagus)",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Wolf Ears",
+    "tier": 1,
+    "description": "Set hp to 6",
+    "grade": "C",
+    "rank": 4,
+    "notes": "Helps early",
+    "unlock": ""
+  },
+  {
+    "name": "Ace of Spades",
+    "tier": 2,
+    "description": "+2 to the left side\n-2 to the five right sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"Gambler-Pick\" achievement"
+  },
+  {
+    "name": "Big Hammer",
+    "tier": 2,
+    "description": "Replace the two left sides with '5 damage heavy' & 'blank'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Blessed Ring",
+    "tier": 2,
+    "description": "Replace the rightmost side with 'Shield 1 rescue'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"Blessed Ring\" achievement"
+  },
+  {
+    "name": "Blessed Water",
+    "tier": 2,
+    "description": "Replace the middle side with 'Heal 3 vitality'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Burning Blade",
+    "tier": 2,
+    "description": "Replace the left side with '4 damage'\n-2 hp",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Citrine Ring",
+    "tier": 2,
+    "description": "+1 pip to the rightmost side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Clef",
+    "tier": 2,
+    "description": "Add treble to the two left sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "Pick with Gladiator",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Clover",
+    "tier": 2,
+    "description": "+1 to the left side\n -2 to the middle side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Clumsy Hammer",
+    "tier": 2,
+    "description": "Replace the top side with '5 damage heavy eliminate'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Duvet",
+    "tier": 2,
+    "description": "Add patient to the three right sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Faint Halo",
+    "tier": 2,
+    "description": "+1 hp this fight whenever I save a hero",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "First aid Kit",
+    "tier": 2,
+    "description": "Replace the bottom side with 'Heal 2 cleanse' if equipped to an orange hero",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Friendship Bracelet",
+    "tier": 2,
+    "description": "+2 empty hp\nMonsters flee if you have 5x as much hp as them instead of 10x",
+    "grade": "C",
+    "rank": 4,
+    "notes": "Picked pretty much only for empty max hp",
+    "unlock": "Complete \"Benevolence\" achievement"
+  },
+  {
+    "name": "Garnet",
+    "tier": 2,
+    "description": "+1 to incoming healing",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Golden Thread",
+    "tier": 2,
+    "description": "+1 pip to all non-damage sides if equipped to a yellow hero",
+    "grade": "C",
+    "rank": 4,
+    "notes": "Can  no longer be copied",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Ice Cube",
+    "tier": 2,
+    "description": "Add stasis to the left side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Learn Remedy",
+    "tier": 2,
+    "description": "Learn the spell: Remedy (Cost: 1 mana - Heal 1 cleanse singleCast)",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Learn Wings",
+    "tier": 2,
+    "description": "Learn the spell: Wings (Cost: 2 mana - Heal 3 to the top and bottom allies)",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Leather Gloves",
+    "tier": 2,
+    "description": "Copy the rightmost side onto the top and bottom sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Liqueur",
+    "tier": 2,
+    "description": "Swap the top side with the rightmost side\n+2 max stored mana",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Needle",
+    "tier": 2,
+    "description": "Add picky & +2 pips to all targeted sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "Very strong on mana/dmg sides (Caldera/Spellblade eg, generally can be taken on and off on 2/3 dmg to deal 4/5. Can put this on mystic and suicide your 6/7 HP hero",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Origami",
+    "tier": 2,
+    "description": "Swap each side with its opposite\n(Swap top side with bottom side, left side with right side, middle side with rightmost side)",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Peaked Cap",
+    "tier": 2,
+    "description": "Copy the middle side onto the left side",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Powdered Mana",
+    "tier": 2,
+    "description": "Replace blank sides with '+1 mana'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "PowerStone",
+    "tier": 2,
+    "description": "Replace the middle side with '+0 mana steel' if equipped to a grey hero",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Quicksilver",
+    "tier": 2,
+    "description": "Keep unused shields",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"Ironclad\" achievement"
+  },
+  {
+    "name": "Rain of Arrows",
+    "tier": 2,
+    "description": "Replace the top side with '1 damage ranged duplicate'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Rejuvenation Wand",
+    "tier": 2,
+    "description": "Replace the top and bottom sides with 'Heal 10 singleUse'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sapphire",
+    "tier": 2,
+    "description": "Replace the middle side with '+2 mana'",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sapphire Skull",
+    "tier": 2,
+    "description": "Upon death: +2 mana",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Silver Imp",
+    "tier": 2,
+    "description": "Replace the top and bottom sides with 'Gain 1 reroll cantrip pain'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "Often incredibly strong lategame! 1 extra reroll is invaluable",
+    "unlock": "Complete \"Spines+\" achievement"
+  },
+  {
+    "name": "Spinach",
+    "tier": 2,
+    "description": "Start of turn 1: Self-heal 3",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Square Wheel",
+    "tier": 2,
+    "description": "Replace the three right sides with 'Gain 1 reroll cantrip', 'blank' & 'blank'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Static Tome",
+    "tier": 2,
+    "description": "Replace the top and bottom sides with '+1 mana pair'",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Statuette",
+    "tier": 2,
+    "description": "Replace the middle row with 'blank'\n+6 hp",
+    "grade": "C",
+    "rank": 4,
+    "notes": "If you have an item that replaces a side on the middle row this is often worth to equip. Possibly without the item on something like a Monk. 6 hp is a lot! ",
+    "unlock": "Complete \"Statue-Pick\" achievement"
+  },
+  {
+    "name": "Syringe",
+    "tier": 2,
+    "description": "Add cantrip to all sides if there are 2 or fewer living heroes",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Tower Shield",
+    "tier": 2,
+    "description": "Replace the middle side with 'Shield 10 heavy'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Twin Daggers",
+    "tier": 2,
+    "description": "Replace the top and bottom sides with '1 damage cantrip'",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Wandify",
+    "tier": 2,
+    "description": "Add singleUse & +1 pip to the two right sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Wild Seeds",
+    "tier": 2,
+    "description": "Add undergrowth to the two left sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Worn Arms",
+    "tier": 2,
+    "description": "Replace the top and bottom sides with '2 damage' & Shield 2'",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Abacus",
+    "tier": 3,
+    "description": "Shift my middle row across by 1\n+1 hp",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Aegis",
+    "tier": 3,
+    "description": "Replace the middle side with 'Shield 1 duplicate steel'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Antivenom",
+    "tier": 3,
+    "description": "Immune to poison",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Unless curses",
+    "unlock": ""
+  },
+  {
+    "name": "Ash",
+    "tier": 3,
+    "description": "Add enduring to the middle two sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Blood Chalice",
+    "tier": 3,
+    "description": "Self-shield 1 for each wasted point of healing I receive",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Buckler",
+    "tier": 3,
+    "description": "Replace the middle side with 'Shield 3 bloodlust'",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Diving Suit",
+    "tier": 3,
+    "description": "Replace the two right sides with the hero below's base sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Droopy Hat",
+    "tier": 3,
+    "description": "+2 hp\n+2 max stored mana",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Dynamo",
+    "tier": 3,
+    "description": "Add singleUse & era to the two right sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Fangs",
+    "tier": 3,
+    "description": "Add selfheal to the left side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Flickering Blade",
+    "tier": 3,
+    "description": "Replace the rightmost side with '1 damage copycat'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Foil",
+    "tier": 3,
+    "description": "Replace the right side with '0 damage skill'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Full Moon",
+    "tier": 3,
+    "description": "Every 2nd turn: Replace all sides with wolf's sides",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Golden Cup",
+    "tier": 3,
+    "description": "+100 empty hp\n+100 max stored mana",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Incense",
+    "tier": 3,
+    "description": "Add rite to the top side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Iron Pendant",
+    "tier": 3,
+    "description": "+1 to incoming shields",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Juice",
+    "tier": 3,
+    "description": "Add selfcleanse to the left side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Kilt",
+    "tier": 3,
+    "description": "Copy the right side onto the rightmost side",
+    "grade": "S",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Ladder",
+    "tier": 3,
+    "description": "Replace the middle side with the hero above's base side",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Lead Boots",
+    "tier": 3,
+    "description": "Add sticky & +1 pip to all sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Learn Flare",
+    "tier": 3,
+    "description": "Learn the spell: Flare (Cost: 4 mana - 5 damage)",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Learn Heat",
+    "tier": 3,
+    "description": "Learn the spell: Heat (Cost: 3 mana - Heal 3 to all allies with shields cleanse)",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Learn Sprout",
+    "tier": 3,
+    "description": "Learn the spell: Sprout (Cost: 3 mana - Heal 3 channel)",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Lich Finger",
+    "tier": 3,
+    "description": "Add manaGain & death to the left side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"Manastorm+\" achievement"
+  },
+  {
+    "name": "Lightning Rod",
+    "tier": 3,
+    "description": "Replace the left side with '0 damage ranged charged rampage pain'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"Choose-Party 5x\" achievement"
+  },
+  {
+    "name": "Longbow",
+    "tier": 3,
+    "description": "Replace the top and bottom sides with '2 damage ranged'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Magnet",
+    "tier": 3,
+    "description": "Add wham to the two right sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Mana Bomb",
+    "tier": 3,
+    "description": "Replace the rightmost side with '0 damage to all heroes and monsters charged manacost'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Obol",
+    "tier": 3,
+    "description": "Add deathwish to the two right sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Pocket Phylactery",
+    "tier": 3,
+    "description": "Add pain to the two left sides\n+5 hp",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Poem",
+    "tier": 3,
+    "description": "Replace the middle column with 'Shield 1 cantrip', 'Shield 1 to all allies' & '1 damage cantrip'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"Poet-Pick\" achievement"
+  },
+  {
+    "name": "Polearm",
+    "tier": 3,
+    "description": "Replace damage sides with my top side",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Pure Heart Pendant",
+    "tier": 3,
+    "description": "Replace the middle side with 'Heal 3 cleanse'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Relic",
+    "tier": 3,
+    "description": "Add swapterminal to all sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Unless parasite",
+    "unlock": "Complete \"Last Legs\" achievement"
+  },
+  {
+    "name": "Ritual Dagger",
+    "tier": 3,
+    "description": "Replace the rightmost side with 'Revive the 4 top-most defeated allies death'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"75 Deaths\" achievement"
+  },
+  {
+    "name": "Scalpel",
+    "tier": 3,
+    "description": "+1 pip to all damage sides if equipped to a red hero",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Siphon",
+    "tier": 3,
+    "description": "Add pain & +1 pip to all mana/manaGain sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Smelly Manure",
+    "tier": 3,
+    "description": "Add growth to the top and bottom sides\nAdd decay to the middle row",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"Overgrowth\" achievement"
+  },
+  {
+    "name": "Terrarium",
+    "tier": 3,
+    "description": "Replace the two right sides with 'Shield 2 growth' & '+1 mana growth'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Three of a Kind",
+    "tier": 3,
+    "description": "Add trio to the rightmost side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Unholy Strength",
+    "tier": 3,
+    "description": "Immune to shields\nImmune to healing\n+1 pip to the middle row",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Viscera",
+    "tier": 3,
+    "description": "Replace the middle side with '0 damage flesh pain'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Whetstone",
+    "tier": 3,
+    "description": "+1 pip to all basic damage sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Alembic",
+    "tier": 4,
+    "description": "Replace the middle side with 'Add manaGain & pain to target's sides this turn'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Apple",
+    "tier": 4,
+    "description": "Add ego to the two left sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Bonesaw",
+    "tier": 4,
+    "description": "Replace the top and bottom sides with '3 damage cruel' if equipped to a red hero",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Cart",
+    "tier": 4,
+    "description": "All heroes: +1 item slot (max 4)\n-2 item slots",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Chainmail",
+    "tier": 4,
+    "description": "+3 hp",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Chakram",
+    "tier": 4,
+    "description": "Replace shield/selfshield sides with 'ranged damage' sides, retaining their original pips and other \nkeywords",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Charged Skull",
+    "tier": 4,
+    "description": "Upon death: +4 mana",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Cocoon",
+    "tier": 4,
+    "description": "Add era & -1 pip to all sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Corruption",
+    "tier": 4,
+    "description": "Add evil & +1 pip to all heal/selfheal sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Demon Eye",
+    "tier": 4,
+    "description": "Add pain & +2 pips to the left side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Duelling Pistol",
+    "tier": 4,
+    "description": "Add duel to the left side",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Enchanted Shield",
+    "tier": 4,
+    "description": "At the start of each turn, self-shield 1",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Eyepatch",
+    "tier": 4,
+    "description": "Remove all keywords from the left side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Faerie Pact",
+    "tier": 4,
+    "description": "Replace the rightmost side with '+4 mana'\n-4 hp",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Flawed Diamond",
+    "tier": 4,
+    "description": "Add pristine to the two left sides\n+4 empty hp",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Gizmo",
+    "tier": 4,
+    "description": "Add shifter to the two right sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Glass Blade",
+    "tier": 4,
+    "description": "Replace the left side with '5 damage'\n'Glass Blade' lost upon death",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Glowing Egg",
+    "tier": 4,
+    "description": "Add growth to the left side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Harpoon",
+    "tier": 4,
+    "description": "Replace the rightmost side with '1 damage vulnerable'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Hissing Ring",
+    "tier": 4,
+    "description": "Replace the middle side with '2 damage poison'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Ink Bottle",
+    "tier": 4,
+    "description": "Replace blank sides with 'Shield 1 cantrip'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Inner Strength",
+    "tier": 4,
+    "description": "Remove red & purple keywords from all sides",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Jester Cap",
+    "tier": 4,
+    "description": "Replace all sides with Jester's sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"Jester-Pick\" achievement"
+  },
+  {
+    "name": "Learn Beam",
+    "tier": 4,
+    "description": "Learn the spell: Beam (Cost: 5 mana - 7 damage singleCast ranged)",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Learn Hack",
+    "tier": 4,
+    "description": "Learn the spell: Hack (Cost: 2 mana - Replace blank sides with '4 damage' this turn)",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Learn Hex",
+    "tier": 4,
+    "description": "Learn the spell: Hex (Cost: 3 mana - Kill an enemy with exactly 6 hp ranged singleCast)",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Learn Invest",
+    "tier": 4,
+    "description": "Learn the spell: Invest (Cost: 4 mana - +6 mana future cooldown)",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Learn Mark",
+    "tier": 4,
+    "description": "Learn the spell: Mark (Cost: 4 mana - 2 damage vulnerable)",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Life Bolt",
+    "tier": 4,
+    "description": "After an ability is cast, self-heal 1",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Mana Jelly",
+    "tier": 4,
+    "description": "Add single-use & cantrip to all mana/mana-gain sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"Manastorm\" achievement"
+  },
+  {
+    "name": "Pauldron",
+    "tier": 4,
+    "description": "+2 pips to the top side\n-2 pips to the bottom side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Pulley",
+    "tier": 4,
+    "description": "Shift my column down by 1\n(Top side moves to middle side, middle side moves to bottom side, bottom side moves to top side)\n+2 item slots",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Red flag",
+    "tier": 4,
+    "description": "+3 hp\nReplace the middle side with 'Redirect all enemy attacks and enemy effects from an ally to me cleave'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"Choose-Party 4x\" achievement"
+  },
+  {
+    "name": "Shortsword",
+    "tier": 4,
+    "description": "Replace the two right sides with '2 damage'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Shuriken",
+    "tier": 4,
+    "description": "Add ranged & chain to the two right sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Splitting Arrows",
+    "tier": 4,
+    "description": "Replace the two right sides with '1 damage ranged cleave'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Troll Nose",
+    "tier": 4,
+    "description": "Start with 1 regen",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"Troll Slayer\" achievement"
+  },
+  {
+    "name": "Updog",
+    "tier": 4,
+    "description": "Add overdog to the top side",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"Sling-Pick\" achievement"
+  },
+  {
+    "name": "Whiskers",
+    "tier": 4,
+    "description": "Replace the three right sides with '1 damage ranged copycat', '1 damage copycat', 'Shield 1 copycat'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Wristblade",
+    "tier": 4,
+    "description": "Replace blank sides with '1 damage doubleUse'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Ambrosia",
+    "tier": 5,
+    "description": "Add rescue to the left side",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Bag of Holding",
+    "tier": 5,
+    "description": "+2 item slots (max 4)\n+2 hp",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Bandana",
+    "tier": 5,
+    "description": "Add cantrip to all pipless sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Candle",
+    "tier": 5,
+    "description": "Add vigil to all sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"Survivor\" achievement"
+  },
+  {
+    "name": "Cauldron",
+    "tier": 5,
+    "description": "Add rite & +1 pip to the middle side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Cracked Plate",
+    "tier": 5,
+    "description": "-4 hp\nAt the start of each turn, self-shield 4",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Cracked Wheel",
+    "tier": 5,
+    "description": "Add sticky to all sides\n+1 reroll",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Crystallise",
+    "tier": 5,
+    "description": "Add stasis to all sides",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Decree",
+    "tier": 5,
+    "description": "Add dogma to all sides",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Demon Horn",
+    "tier": 5,
+    "description": "Replace the rightmost side with 'Heal 2 boost inflictpain'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Determination",
+    "tier": 5,
+    "description": "The 1st turn: Cannot die",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Unless curses",
+    "unlock": "Complete \"70 Cheat Death\" achievement"
+  },
+  {
+    "name": "Door",
+    "tier": 5,
+    "description": "+2 pips to all shield/selfshield sides if there are 4 or more monsters",
+    "grade": "S",
+    "rank": 1,
+    "notes": "Sorc",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Dragonhide Gloves",
+    "tier": 5,
+    "description": "Copy the middle side onto the top and bottom sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Early Grave",
+    "tier": 5,
+    "description": "Add pain & cantrip to all sides with 3 or more pips",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"25 Deaths\" achievement"
+  },
+  {
+    "name": "Enchanted Harp",
+    "tier": 5,
+    "description": "Replace the middle side with 'Shield 2 to all allies'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"Bard-Pick\" achievement"
+  },
+  {
+    "name": "Enhance Wand",
+    "tier": 5,
+    "description": "Replace the top side with 'Shield 1 singleUse permaBoost'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Erythrocyte",
+    "tier": 5,
+    "description": "Replace the middle side with 'Shield 0 flesh'",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Fearless",
+    "tier": 5,
+    "description": "+1 hp\nReplace the rightmost side with 'Stun an enemy with equal or less hp than me'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Glyph of Purity",
+    "tier": 5,
+    "description": "Add cleanse to the top and bottom sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Justice",
+    "tier": 5,
+    "description": "Add guilt & +1 pip to all damage sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Lens",
+    "tier": 5,
+    "description": "Add focus to all heal/selfheal sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Longsword",
+    "tier": 5,
+    "description": "Replace the middle row with '3 damage'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Magic Staff",
+    "tier": 5,
+    "description": "Set all mana/manaGain sides to 2",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Mini Crossbow",
+    "tier": 5,
+    "description": "Replace the top side with '2 damage ranged, engage'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Monocle",
+    "tier": 5,
+    "description": "Add engage to the middle side",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Natural",
+    "tier": 5,
+    "description": "Replace the two right sides with '+2 mana' if equipped to a blue hero",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Nunchaku",
+    "tier": 5,
+    "description": "Add chain to the top and bottom sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Ordinary Triangle",
+    "tier": 5,
+    "description": "+1 pip to all sides with exactly 3 pips",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"All 3\" achievement"
+  },
+  {
+    "name": "Polished Emerald",
+    "tier": 5,
+    "description": "Gain the effects of all tier 2-4 items on other heroes\n(Can copy the effects of items that are exclusive to a certain hero color)",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"Hidden Emerald\" achievement"
+  },
+  {
+    "name": "Poodle",
+    "tier": 5,
+    "description": "Add dog to the middle column",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"Updog-Pick\" achievement"
+  },
+  {
+    "name": "Ruby",
+    "tier": 5,
+    "description": "+2 to incoming healing\n+2 empty hp",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sack of Mana",
+    "tier": 5,
+    "description": "Replace the middle column with 'blank', '+4 mana' & 'blank'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sceptre",
+    "tier": 5,
+    "description": "Replace the left side with '1 damage lead'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Shimmering Halo",
+    "tier": 5,
+    "description": "+2 hp this fight whenever you save a hero",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"Saviour\" achievement"
+  },
+  {
+    "name": "Shining Bow",
+    "tier": 5,
+    "description": "Add ranged to all damage sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "Unless curses",
+    "unlock": ""
+  },
+  {
+    "name": "Simplicity",
+    "tier": 5,
+    "description": "+1 to all basic heal, mana, damage & shield sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sling",
+    "tier": 5,
+    "description": "Add underdog to the bottom side",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Soup",
+    "tier": 5,
+    "description": "Replace shield/selfshield sides with 'heal and shield sides', retaining their original pips and other \nkeywords",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Tiara",
+    "tier": 5,
+    "description": "Add selfheal to all mana/manaGain sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Treasure Chest",
+    "tier": 5,
+    "description": "Add hoard & singleUse to the left side",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"Challenger+\" achievement"
+  },
+  {
+    "name": "Wand Grips",
+    "tier": 5,
+    "description": "Add singleUse & +2 to the left side",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Water",
+    "tier": 5,
+    "description": "+1 pip to the left and right sides\n -1 pip to the middle and rightmost sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Whiskey",
+    "tier": 5,
+    "description": "+3 hp\n+6 empty hp",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Blindfold",
+    "tier": 6,
+    "description": "Remove all keywords from all sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Blinding Bolt",
+    "tier": 6,
+    "description": "After an ability is used, self-shield 2",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Blood Amulet",
+    "tier": 6,
+    "description": "Add selfheal to the two left sides",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Braids",
+    "tier": 6,
+    "description": "Copy the left side onto the middle side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Burning Halo",
+    "tier": 6,
+    "description": "1 damage to all enemies whenever I save a hero",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Catnip",
+    "tier": 6,
+    "description": "Add cantrip to the rightmost side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Conduit",
+    "tier": 6,
+    "description": "Replace the middle side with '+2 mana duplicate'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Crescent Shield",
+    "tier": 6,
+    "description": "Replace the left side with 'Shield 1 repel rampage rescue'",
+    "grade": "D",
+    "rank": 6,
+    "notes": "Really need extra pips or it just doesn't work",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Demon Claw",
+    "tier": 6,
+    "description": "Add rampage & -1 pip to the left side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Demonic Deal",
+    "tier": 6,
+    "description": "Add pain & +2 pips to all sides",
+    "grade": "C",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"Reaper\" achievement"
+  },
+  {
+    "name": "Ghost Shield",
+    "tier": 6,
+    "description": "At the start of each turn, self-shield 2",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Honeycomb",
+    "tier": 6,
+    "description": "Add sixth to the three right sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "InfiniHeal",
+    "tier": 6,
+    "description": "Replace the two right sides with 'heal all' sides, retaining their original value and keywords",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Jump",
+    "tier": 6,
+    "description": "Add all keywords from the left side to the top and bottom sides\nReplace the left side with 'blank'",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Karma",
+    "tier": 6,
+    "description": "Add selfheal to all heal sides\nAdd selfshield to all shield sides\nAdd pain to all damage sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Katar",
+    "tier": 6,
+    "description": "Add trio to all damage sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Kite Shield",
+    "tier": 6,
+    "description": "Set all shield/selfshield sides to 3",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Leaden Handle",
+    "tier": 6,
+    "description": "Add heavy & +1 pip to all targeted sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Learn Luck",
+    "tier": 6,
+    "description": "Learn the spell: Luck (Cost: 3 mana - Gain 8 rerolls future cooldown)",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Lich Eye",
+    "tier": 6,
+    "description": "Add manaGain & death & +2 pips to all sides",
+    "grade": "D",
+    "rank": 6,
+    "notes": "Extremely context dependant. Very often can't pick it unless specific big pips or aggressive",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Ocular Amulet",
+    "tier": 6,
+    "description": "+1 pip to the left side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Scales",
+    "tier": 6,
+    "description": "Set the value of the rightmost side to the maximum of my other side's values",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Silver Pendant",
+    "tier": 6,
+    "description": "+2 to incoming shields",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sponge",
+    "tier": 6,
+    "description": "When an enemy dies, +1 pip to all sides this turn",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Tie",
+    "tier": 6,
+    "description": "Add pristine to the middle side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Tooth Necklace",
+    "tier": 6,
+    "description": "Add cruel to the two left sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Troll Blood",
+    "tier": 6,
+    "description": "Start with 2 regen",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"Troll Nemesis\" achievement"
+  },
+  {
+    "name": "Twisted Flax",
+    "tier": 6,
+    "description": "+1 pip to the top and bottom sides\n -1 pip to the middle side",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Urn",
+    "tier": 6,
+    "description": "Add enduring to all sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Wand of Stun",
+    "tier": 6,
+    "description": "Replace the middle side with 'Stun an enemy singleUse'",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": "Complete \"NOT FAIR!\" achievement"
+  },
+  {
+    "name": "Wedding Rings",
+    "tier": 6,
+    "description": "Add pair to all heal/selfheal sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Wooden Bracelet",
+    "tier": 6,
+    "description": "+1 pip to all sides with no keywords",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Wrench",
+    "tier": 6,
+    "description": "+1 pip to the middle side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Anvil",
+    "tier": 7,
+    "description": "Add steel to the middle side",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Botany",
+    "tier": 7,
+    "description": "Add groupgrowth to all heal/selfheal sides",
+    "grade": "B",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Brimstone",
+    "tier": 7,
+    "description": "Triple the pips of the rightmost side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Broadsword",
+    "tier": 7,
+    "description": "Replace the middle column with '4 damage'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Charge Link",
+    "tier": 7,
+    "description": "Add charged & singleUse to the top and bottom sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Dragon Pipe",
+    "tier": 7,
+    "description": "+1 pip to all heal/selfheal sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Duck",
+    "tier": 7,
+    "description": "Add echo to the two right sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Eucalyptus",
+    "tier": 7,
+    "description": "Replace the right side with 'Heal 1 cleanse quadUse'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Flute",
+    "tier": 7,
+    "description": "Replace the rightmost side with 'Shield 1 to all allies cantrip'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Glass Heart",
+    "tier": 7,
+    "description": "Death is permanent\n+1 pip to all sides",
+    "grade": "S",
+    "rank": 2,
+    "notes": "@Tulex if you die with this",
+    "unlock": ""
+  },
+  {
+    "name": "Hourglass",
+    "tier": 7,
+    "description": "The 1st turn: +1 pip to all sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"Alpha Strike\" achievement"
+  },
+  {
+    "name": "Ichor Chalice",
+    "tier": 7,
+    "description": "1 damage to the top-most enemy for each wasted point of healing I receive",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"Heal+\" achievement"
+  },
+  {
+    "name": "Iron Helm",
+    "tier": 7,
+    "description": "+6 hp",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Jewel Loupe",
+    "tier": 7,
+    "description": "Add manaGain to all sides with exactly 1 pip",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"All 1\" achievement"
+  },
+  {
+    "name": "Learn Charge",
+    "tier": 7,
+    "description": "Learn the spell: Charge (Cost: 2 mana - Shield 2 boost singleCast)",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Metal Studs",
+    "tier": 7,
+    "description": "+1 pip to all shield/selfshield sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Mushroom",
+    "tier": 7,
+    "description": "Add decay & +1 pip to all sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Ogre Blood",
+    "tier": 7,
+    "description": "Add bloodlust to the middle side",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Pair of Kings",
+    "tier": 7,
+    "description": "Add pair to the top and bottom sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Pocket Mirror",
+    "tier": 7,
+    "description": "Copy the left side onto the rightmost side",
+    "grade": "C",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Second Chance",
+    "tier": 7,
+    "description": "Replace the rightmost side with 'Another hero can use their dice again'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sharp Wit",
+    "tier": 7,
+    "description": "Replace mana/manaGain sides with 'basic damage' sides, retaining their other keywords and triple \ntheir pips",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sparks",
+    "tier": 7,
+    "description": "Add cantrip to all sides with exactly 1 pip",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Tentacle",
+    "tier": 7,
+    "description": "Add repel to the two right sides",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Thimble",
+    "tier": 7,
+    "description": "Immune to damage during my turn",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"Oops\" achievement"
+  },
+  {
+    "name": "Twisted Bar",
+    "tier": 7,
+    "description": "Set all sides to 2",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"All 2\" achievement"
+  },
+  {
+    "name": "Two Reeds",
+    "tier": 7,
+    "description": "+1 pip to all sides with even pips",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Wandcraft",
+    "tier": 7,
+    "description": "Replace all sides with 'singleUse mana' sides, retaining their original pips and keywords",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Wine",
+    "tier": 7,
+    "description": "Start poisoned\nAll monsters: Start poisoned",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": "Complete \"Green Blood\" achievement"
+  },
+  {
+    "name": "Boots of Speed",
+    "tier": 8,
+    "description": "+1 reroll\nReplace the left side with 'Dodge all damage and enemy effects this turn'",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Bullseye",
+    "tier": 8,
+    "description": "Add engage to the middle column",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Deadly Bolt",
+    "tier": 8,
+    "description": "After an ability is used, 1 damage to the top-most enemy",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": "Complete \"Wizard\" achievement"
+  },
+  {
+    "name": "Faerie Dust",
+    "tier": 8,
+    "description": "Replace blank sides with '+3 mana'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Gauntlet",
+    "tier": 8,
+    "description": "+1 pip to all damage sides",
+    "grade": "B",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Greatsword",
+    "tier": 8,
+    "description": "Replace the middle side with '5 damage inspired'",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Holy Book",
+    "tier": 8,
+    "description": "Add cleanse & selfcleanse to the middle row",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Iron Crown",
+    "tier": 8,
+    "description": "+4 pips to the left side if equipped to a grey hero",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Ironblood Pendant",
+    "tier": 8,
+    "description": "+3 to incoming healing and shields",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Learn Spark",
+    "tier": 8,
+    "description": "Learn the spell: Spark (Cost: 4 mana - Add manaGain to target's sides this turn)",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Lion",
+    "tier": 8,
+    "description": "Add fierce to the two left sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Mirror Mask",
+    "tier": 8,
+    "description": "Replace all sides with the hero above's base sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Olympian Trident",
+    "tier": 8,
+    "description": "Add cleave to the middle side",
+    "grade": "D",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Ornate Hilt",
+    "tier": 8,
+    "description": "Add selfshield to all damage sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Prism",
+    "tier": 8,
+    "description": "Add rainbow to the middle side",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sapphire Ring",
+    "tier": 8,
+    "description": "+1 pip to all mana/manaGain sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Scorpion Tail",
+    "tier": 8,
+    "description": "Add weaken & pain to the top and bottom sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sickle",
+    "tier": 8,
+    "description": "+1 pip to all lowest-pip sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Singularity",
+    "tier": 8,
+    "description": "+2 pips to the two right sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Standard",
+    "tier": 8,
+    "description": "+1 pip to all sides if equipped to a yellow hero",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Sushi",
+    "tier": 8,
+    "description": "Replace the left side with 'Gain 2 rerolls cantrip'",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Tourmaline Paraiba",
+    "tier": 8,
+    "description": "Add era to all mana/manaGain sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Tusk",
+    "tier": 8,
+    "description": "+1 pip to all heal/selfheal sides\n+1 pip to all shield/selfshield sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Angel Feather",
+    "tier": 9,
+    "description": "Add rescue to the top and bottom sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Boarhide Bracers",
+    "tier": 9,
+    "description": "+2 pips to the top and bottom sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Chaos Wand",
+    "tier": 9,
+    "description": "Replace the middle side with '1 damage singleUse cleave engage selfheal weaken vulnerable'",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": "Complete \"Chaos+++\" achievement"
+  },
+  {
+    "name": "Charged Hammer",
+    "tier": 9,
+    "description": "Replace the left side with '10 damage heavy, charged'",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Collar",
+    "tier": 9,
+    "description": "Add copycat to the top and bottom sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": "Complete \"45 Achievements\" achievement"
+  },
+  {
+    "name": "Dumbbell",
+    "tier": 9,
+    "description": "+4 pips to all sides with 4 or more pips",
+    "grade": "C",
+    "rank": 4,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Egg Basket",
+    "tier": 9,
+    "description": "+6 pip to the left side\nReplace the five right sides with 'blank'",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Emerald Mirror",
+    "tier": 9,
+    "description": "Gain the effects of all tier 6-8 items on other heroes",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Eye of Horus",
+    "tier": 9,
+    "description": "+1 pip to all sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Helm of Power",
+    "tier": 9,
+    "description": "Double the pips of the left side",
+    "grade": "F",
+    "rank": 6,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Horned Viper",
+    "tier": 9,
+    "description": "Add poison to the two left sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": "Complete \"Mandrake\" achievement"
+  },
+  {
+    "name": "Overflowing Chalice",
+    "tier": 9,
+    "description": "Add fizz to the three right sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Poison Dip",
+    "tier": 9,
+    "description": "Add poison to the top and bottom sides",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Second Heart",
+    "tier": 9,
+    "description": "+1 hp for each 1 hp",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Serration",
+    "tier": 9,
+    "description": "Add vulnerable to the top and bottom sides",
+    "grade": "S",
+    "rank": 1,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Shiny Gauntlets",
+    "tier": 9,
+    "description": "Add pristine to the top and bottom sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Silk Cape",
+    "tier": 9,
+    "description": "Copy the left side onto the middle row",
+    "grade": "A",
+    "rank": 2,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Spike Stone",
+    "tier": 9,
+    "description": "Add fumble & +3 pips to the five right sides",
+    "grade": "F",
+    "rank": 6,
+    "notes": "Unless stasis",
+    "unlock": ""
+  },
+  {
+    "name": "Timestone",
+    "tier": 9,
+    "description": "Add cantrip to the two right sides",
+    "grade": "D",
+    "rank": 5,
+    "notes": "",
+    "unlock": ""
+  },
+  {
+    "name": "Triple Shuriken",
+    "tier": 9,
+    "description": "Add ranged & chain to all sides",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  },
+  {
+    "name": "Wax Seal",
+    "tier": 9,
+    "description": "All sides get +1 pip for each other identical side",
+    "grade": "B",
+    "rank": 3,
+    "notes": "",
+    "unlock": "Complete \"70 Achievements\" achievement"
+  }
+]

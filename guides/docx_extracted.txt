@@ -1,0 +1,18 @@
+Slice & Dice Undocumented Textmod Guide (v3.2)
+
+
+
+More Slice & Dice resources can be found at the official Discord server:
+https://discord.gg/TqUdVPSWDt
+Or linked in-game:
+https://tann.fun/games/dice/textmod/
+What is Textmod?
+
+Textmod offers an incredibly diverse range of APIs that can be used to edit existing modifiers, heroes, and items to create almost anything. Many of the available templates in Textmod are fairly intuitive and come with a template and a myriad of randomly generated examples.
+ I encourage you to look through the API list and experiment with all of the options it provides. This guide will assume you are comfortable with basic Textmod APIs, including the +more option. There are a few more confusing APIs available that seem to lack enough explanation to use them properly, however.
+
+	This guide will be split into 7 distinct sections to cover each group of tools: Choosable tags, Phases, Hidden Items & Modifiers, Tog items, Togres and its variants, AbilityData, and TriggerHPData. Each of these is mentioned by the API menu but has advanced usage that is not covered in-game. Within these sections, many different concepts are covered, and each will be accompanied with (hopefully) useful examples.
+
+If you discover any inaccuracies in this guide or have any comments, suggestions, or ideas, feel free to message me on Discord (thun.der). The official Slice & Dice discord server, linked above, is the best place to find me.
+
+	To navigate this document, you must switch the tab that is currently selected. On PC, this should show up as a table of contents on the left. Clicking the tab again will show the sections within that tab. On mobile, tabs are switched at the bottom of the screen.

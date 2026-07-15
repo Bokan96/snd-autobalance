@@ -1,0 +1,1847 @@
+{
+    "heroes": [
+        {
+            "name": "Thief",
+            "tier": 1,
+            "color": "orange"
+        },
+        {
+            "name": "Scoundrel",
+            "tier": 1,
+            "color": "orange"
+        },
+        {
+            "name": "Lost",
+            "tier": 1,
+            "color": "orange"
+        },
+        {
+            "name": "Dabble",
+            "tier": 1,
+            "color": "orange"
+        },
+        {
+            "name": "Clumsy",
+            "tier": 1,
+            "color": "orange"
+        },
+        {
+            "name": "Spellblade",
+            "tier": 2,
+            "color": "orange"
+        },
+        {
+            "name": "Trapper",
+            "tier": 2,
+            "color": "orange"
+        },
+        {
+            "name": "Juggler",
+            "tier": 2,
+            "color": "orange"
+        },
+        {
+            "name": "Ninja",
+            "tier": 2,
+            "color": "orange"
+        },
+        {
+            "name": "Rogue",
+            "tier": 2,
+            "color": "orange"
+        },
+        {
+            "name": "Dabbler",
+            "tier": 2,
+            "color": "orange"
+        },
+        {
+            "name": "Ranger",
+            "tier": 2,
+            "color": "orange"
+        },
+        {
+            "name": "Gambler",
+            "tier": 2,
+            "color": "orange"
+        },
+        {
+            "name": "Venom",
+            "tier": 3,
+            "color": "orange"
+        },
+        {
+            "name": "Assassin",
+            "tier": 3,
+            "color": "orange"
+        },
+        {
+            "name": "Dancer",
+            "tier": 3,
+            "color": "orange"
+        },
+        {
+            "name": "Roulette",
+            "tier": 3,
+            "color": "orange"
+        },
+        {
+            "name": "Ludus",
+            "tier": 3,
+            "color": "orange"
+        },
+        {
+            "name": "Fencer",
+            "tier": 3,
+            "color": "orange"
+        },
+        {
+            "name": "Dabblest",
+            "tier": 3,
+            "color": "orange"
+        },
+        {
+            "name": "Sharpshot",
+            "tier": 3,
+            "color": "orange"
+        },
+        {
+            "name": "Agent",
+            "tier": 3,
+            "color": "orange"
+        },
+        {
+            "name": "Fighter",
+            "tier": 1,
+            "color": "yellow"
+        },
+        {
+            "name": "Brigand",
+            "tier": 1,
+            "color": "yellow"
+        },
+        {
+            "name": "Ruffian",
+            "tier": 1,
+            "color": "yellow"
+        },
+        {
+            "name": "Hoarder",
+            "tier": 1,
+            "color": "yellow"
+        },
+        {
+            "name": "Lazy",
+            "tier": 1,
+            "color": "yellow"
+        },
+        {
+            "name": "Berserker",
+            "tier": 2,
+            "color": "yellow"
+        },
+        {
+            "name": "Scrapper",
+            "tier": 2,
+            "color": "yellow"
+        },
+        {
+            "name": "Brute",
+            "tier": 2,
+            "color": "yellow"
+        },
+        {
+            "name": "Sinew",
+            "tier": 2,
+            "color": "yellow"
+        },
+        {
+            "name": "Gladiator",
+            "tier": 2,
+            "color": "yellow"
+        },
+        {
+            "name": "Whirl",
+            "tier": 2,
+            "color": "yellow"
+        },
+        {
+            "name": "Collector",
+            "tier": 2,
+            "color": "yellow"
+        },
+        {
+            "name": "Soldier",
+            "tier": 2,
+            "color": "yellow"
+        },
+        {
+            "name": "Barbarian",
+            "tier": 3,
+            "color": "yellow"
+        },
+        {
+            "name": "Brawler",
+            "tier": 3,
+            "color": "yellow"
+        },
+        {
+            "name": "Eccentric",
+            "tier": 3,
+            "color": "yellow"
+        },
+        {
+            "name": "Leader",
+            "tier": 3,
+            "color": "yellow"
+        },
+        {
+            "name": "Wanderer",
+            "tier": 3,
+            "color": "yellow"
+        },
+        {
+            "name": "Bash",
+            "tier": 3,
+            "color": "yellow"
+        },
+        {
+            "name": "Veteran",
+            "tier": 3,
+            "color": "yellow"
+        },
+        {
+            "name": "Curator",
+            "tier": 3,
+            "color": "yellow"
+        },
+        {
+            "name": "Captain",
+            "tier": 3,
+            "color": "yellow"
+        },
+        {
+            "name": "Healer",
+            "tier": 1,
+            "color": "red"
+        },
+        {
+            "name": "Acolyte",
+            "tier": 1,
+            "color": "red"
+        },
+        {
+            "name": "Mystic",
+            "tier": 1,
+            "color": "red"
+        },
+        {
+            "name": "Splint",
+            "tier": 1,
+            "color": "red"
+        },
+        {
+            "name": "Gardener",
+            "tier": 1,
+            "color": "red"
+        },
+        {
+            "name": "Druid",
+            "tier": 2,
+            "color": "red"
+        },
+        {
+            "name": "Herbalist",
+            "tier": 2,
+            "color": "red"
+        },
+        {
+            "name": "Fey",
+            "tier": 2,
+            "color": "red"
+        },
+        {
+            "name": "Disciple",
+            "tier": 2,
+            "color": "red"
+        },
+        {
+            "name": "Vampire",
+            "tier": 2,
+            "color": "red"
+        },
+        {
+            "name": "Medic",
+            "tier": 2,
+            "color": "red"
+        },
+        {
+            "name": "Priestess",
+            "tier": 2,
+            "color": "red"
+        },
+        {
+            "name": "Enchanter",
+            "tier": 2,
+            "color": "red"
+        },
+        {
+            "name": "Doctor",
+            "tier": 3,
+            "color": "red"
+        },
+        {
+            "name": "Fate",
+            "tier": 3,
+            "color": "red"
+        },
+        {
+            "name": "Surgeon",
+            "tier": 3,
+            "color": "red"
+        },
+        {
+            "name": "Witch",
+            "tier": 3,
+            "color": "red"
+        },
+        {
+            "name": "Prophet",
+            "tier": 3,
+            "color": "red"
+        },
+        {
+            "name": "Forsaken",
+            "tier": 3,
+            "color": "red"
+        },
+        {
+            "name": "Wraith",
+            "tier": 3,
+            "color": "red"
+        },
+        {
+            "name": "Shaman",
+            "tier": 3,
+            "color": "red"
+        },
+        {
+            "name": "Mage",
+            "tier": 1,
+            "color": "blue"
+        },
+        {
+            "name": "Student",
+            "tier": 1,
+            "color": "blue"
+        },
+        {
+            "name": "Initiate",
+            "tier": 1,
+            "color": "blue"
+        },
+        {
+            "name": "Cultist",
+            "tier": 1,
+            "color": "blue"
+        },
+        {
+            "name": "Prodigy",
+            "tier": 1,
+            "color": "blue"
+        },
+        {
+            "name": "Meddler",
+            "tier": 1,
+            "color": "blue"
+        },
+        {
+            "name": "Caldera",
+            "tier": 2,
+            "color": "blue"
+        },
+        {
+            "name": "Fiend",
+            "tier": 2,
+            "color": "blue"
+        },
+        {
+            "name": "Jester",
+            "tier": 2,
+            "color": "blue"
+        },
+        {
+            "name": "Myco",
+            "tier": 2,
+            "color": "blue"
+        },
+        {
+            "name": "Sparky",
+            "tier": 2,
+            "color": "blue"
+        },
+        {
+            "name": "Glacia",
+            "tier": 2,
+            "color": "blue"
+        },
+        {
+            "name": "Seer",
+            "tier": 2,
+            "color": "blue"
+        },
+        {
+            "name": "Evoker",
+            "tier": 2,
+            "color": "blue"
+        },
+        {
+            "name": "Artificer",
+            "tier": 3,
+            "color": "blue"
+        },
+        {
+            "name": "Sorcerer",
+            "tier": 3,
+            "color": "blue"
+        },
+        {
+            "name": "Wizard",
+            "tier": 3,
+            "color": "blue"
+        },
+        {
+            "name": "Warlock",
+            "tier": 3,
+            "color": "blue"
+        },
+        {
+            "name": "Weaver",
+            "tier": 3,
+            "color": "blue"
+        },
+        {
+            "name": "Chronos",
+            "tier": 3,
+            "color": "blue"
+        },
+        {
+            "name": "Ace",
+            "tier": 3,
+            "color": "blue"
+        },
+        {
+            "name": "Ghast",
+            "tier": 3,
+            "color": "blue"
+        },
+        {
+            "name": "Tinder",
+            "tier": 1,
+            "color": "green"
+        },
+        {
+            "name": "Reflection",
+            "tier": 1,
+            "color": "green"
+        },
+        {
+            "name": "Housecat",
+            "tier": 1,
+            "color": "green"
+        },
+        {
+            "name": "Spade",
+            "tier": 1,
+            "color": "green"
+        },
+        {
+            "name": "Pockets",
+            "tier": 1,
+            "color": "green"
+        },
+        {
+            "name": "Primrose",
+            "tier": 1,
+            "color": "green"
+        },
+        {
+            "name": "Presence",
+            "tier": 2,
+            "color": "green"
+        },
+        {
+            "name": "Spine",
+            "tier": 2,
+            "color": "green"
+        },
+        {
+            "name": "Coffin",
+            "tier": 2,
+            "color": "green"
+        },
+        {
+            "name": "Sphere",
+            "tier": 2,
+            "color": "green"
+        },
+        {
+            "name": "Granite",
+            "tier": 2,
+            "color": "green"
+        },
+        {
+            "name": "Mimic",
+            "tier": 2,
+            "color": "green"
+        },
+        {
+            "name": "Alien",
+            "tier": 2,
+            "color": "green"
+        },
+        {
+            "name": "Statue",
+            "tier": 2,
+            "color": "green"
+        },
+        {
+            "name": "Robot",
+            "tier": 3,
+            "color": "green"
+        },
+        {
+            "name": "Luggage",
+            "tier": 3,
+            "color": "green"
+        },
+        {
+            "name": "Vessel",
+            "tier": 3,
+            "color": "green"
+        },
+        {
+            "name": "Dice",
+            "tier": 3,
+            "color": "green"
+        },
+        {
+            "name": "Jumble",
+            "tier": 3,
+            "color": "green"
+        },
+        {
+            "name": "Tainted",
+            "tier": 3,
+            "color": "green"
+        },
+        {
+            "name": "Twin",
+            "tier": 3,
+            "color": "green"
+        },
+        {
+            "name": "Tw1n",
+            "tier": 3,
+            "color": "green"
+        }
+    ],
+    "items": [
+        {
+            "name": "Anchor",
+            "tier": 1
+        },
+        {
+            "name": "Arrow",
+            "tier": 1
+        },
+        {
+            "name": "Autumn Leaf",
+            "tier": 1
+        },
+        {
+            "name": "Balisong",
+            "tier": 1
+        },
+        {
+            "name": "Ballet Shoes",
+            "tier": 1
+        },
+        {
+            "name": "Barkskin",
+            "tier": 1
+        },
+        {
+            "name": "Basilisk Scale",
+            "tier": 1
+        },
+        {
+            "name": "Big Heart",
+            "tier": 1
+        },
+        {
+            "name": "Big Shield",
+            "tier": 1
+        },
+        {
+            "name": "Bone Charm",
+            "tier": 1
+        },
+        {
+            "name": "Bowl",
+            "tier": 1
+        },
+        {
+            "name": "Castor Root",
+            "tier": 1
+        },
+        {
+            "name": "Change of Heart",
+            "tier": 1
+        },
+        {
+            "name": "Cheating Sleeves",
+            "tier": 1
+        },
+        {
+            "name": "Cloak",
+            "tier": 1
+        },
+        {
+            "name": "Clumsy Shoes",
+            "tier": 1
+        },
+        {
+            "name": "Coin",
+            "tier": 1
+        },
+        {
+            "name": "Compass",
+            "tier": 1
+        },
+        {
+            "name": "Copper Ring",
+            "tier": 1
+        },
+        {
+            "name": "Corset",
+            "tier": 1
+        },
+        {
+            "name": "Courage Potion",
+            "tier": 1
+        },
+        {
+            "name": "Doll",
+            "tier": 1
+        },
+        {
+            "name": "Doom Blade",
+            "tier": 1
+        },
+        {
+            "name": "Emerald Shard",
+            "tier": 1
+        },
+        {
+            "name": "Fletching",
+            "tier": 1
+        },
+        {
+            "name": "Glass Helm",
+            "tier": 1
+        },
+        {
+            "name": "Healing Wand",
+            "tier": 1
+        },
+        {
+            "name": "Infused Herbs",
+            "tier": 1
+        },
+        {
+            "name": "Iron Heart",
+            "tier": 1
+        },
+        {
+            "name": "Knife Bag",
+            "tier": 1
+        },
+        {
+            "name": "Learn Poultice",
+            "tier": 1
+        },
+        {
+            "name": "Leather Vest",
+            "tier": 1
+        },
+        {
+            "name": "Memory",
+            "tier": 1
+        },
+        {
+            "name": "Necromancer Tome",
+            "tier": 1
+        },
+        {
+            "name": "Pendulum",
+            "tier": 1
+        },
+        {
+            "name": "Pillow",
+            "tier": 1
+        },
+        {
+            "name": "Quiver",
+            "tier": 1
+        },
+        {
+            "name": "Reagents",
+            "tier": 1
+        },
+        {
+            "name": "Revive Potion",
+            "tier": 1
+        },
+        {
+            "name": "Rusty Plate",
+            "tier": 1
+        },
+        {
+            "name": "Scar",
+            "tier": 1
+        },
+        {
+            "name": "Seedling",
+            "tier": 1
+        },
+        {
+            "name": "Sorcery Notes",
+            "tier": 1
+        },
+        {
+            "name": "Tankard",
+            "tier": 1
+        },
+        {
+            "name": "Tattered Robes",
+            "tier": 1
+        },
+        {
+            "name": "Tincture",
+            "tier": 1
+        },
+        {
+            "name": "Titanbane Potion",
+            "tier": 1
+        },
+        {
+            "name": "Trowel",
+            "tier": 1
+        },
+        {
+            "name": "Wand of Wand",
+            "tier": 1
+        },
+        {
+            "name": "Whey",
+            "tier": 1
+        },
+        {
+            "name": "Wolf Ears",
+            "tier": 1
+        },
+        {
+            "name": "Ace of Spades",
+            "tier": 2
+        },
+        {
+            "name": "Big Hammer",
+            "tier": 2
+        },
+        {
+            "name": "Blessed Ring",
+            "tier": 2
+        },
+        {
+            "name": "Blessed Water",
+            "tier": 2
+        },
+        {
+            "name": "Burning Blade",
+            "tier": 2
+        },
+        {
+            "name": "Citrine Ring",
+            "tier": 2
+        },
+        {
+            "name": "Clef",
+            "tier": 2
+        },
+        {
+            "name": "Clover",
+            "tier": 2
+        },
+        {
+            "name": "Clumsy Hammer",
+            "tier": 2
+        },
+        {
+            "name": "Duvet",
+            "tier": 2
+        },
+        {
+            "name": "Faint Halo",
+            "tier": 2
+        },
+        {
+            "name": "First aid Kit",
+            "tier": 2
+        },
+        {
+            "name": "Friendship Bracelet",
+            "tier": 2
+        },
+        {
+            "name": "Garnet",
+            "tier": 2
+        },
+        {
+            "name": "Golden Thread",
+            "tier": 2
+        },
+        {
+            "name": "Ice Cube",
+            "tier": 2
+        },
+        {
+            "name": "Learn Remedy",
+            "tier": 2
+        },
+        {
+            "name": "Learn Wings",
+            "tier": 2
+        },
+        {
+            "name": "Leather Gloves",
+            "tier": 2
+        },
+        {
+            "name": "Liqueur",
+            "tier": 2
+        },
+        {
+            "name": "Needle",
+            "tier": 2
+        },
+        {
+            "name": "Origami",
+            "tier": 2
+        },
+        {
+            "name": "Peaked Cap",
+            "tier": 2
+        },
+        {
+            "name": "Powdered Mana",
+            "tier": 2
+        },
+        {
+            "name": "PowerStone",
+            "tier": 2
+        },
+        {
+            "name": "Quicksilver",
+            "tier": 2
+        },
+        {
+            "name": "Rain of Arrows",
+            "tier": 2
+        },
+        {
+            "name": "Rejuvenation Wand",
+            "tier": 2
+        },
+        {
+            "name": "Sapphire",
+            "tier": 2
+        },
+        {
+            "name": "Sapphire Skull",
+            "tier": 2
+        },
+        {
+            "name": "Silver Imp",
+            "tier": 2
+        },
+        {
+            "name": "Spinach",
+            "tier": 2
+        },
+        {
+            "name": "Square Wheel",
+            "tier": 2
+        },
+        {
+            "name": "Static Tome",
+            "tier": 2
+        },
+        {
+            "name": "Statuette",
+            "tier": 2
+        },
+        {
+            "name": "Syringe",
+            "tier": 2
+        },
+        {
+            "name": "Tower Shield",
+            "tier": 2
+        },
+        {
+            "name": "Twin Daggers",
+            "tier": 2
+        },
+        {
+            "name": "Wandify",
+            "tier": 2
+        },
+        {
+            "name": "Wild Seeds",
+            "tier": 2
+        },
+        {
+            "name": "Worn Arms",
+            "tier": 2
+        },
+        {
+            "name": "Abacus",
+            "tier": 3
+        },
+        {
+            "name": "Aegis",
+            "tier": 3
+        },
+        {
+            "name": "Antivenom",
+            "tier": 3
+        },
+        {
+            "name": "Ash",
+            "tier": 3
+        },
+        {
+            "name": "Blood Chalice",
+            "tier": 3
+        },
+        {
+            "name": "Buckler",
+            "tier": 3
+        },
+        {
+            "name": "Diving Suit",
+            "tier": 3
+        },
+        {
+            "name": "Droopy Hat",
+            "tier": 3
+        },
+        {
+            "name": "Dynamo",
+            "tier": 3
+        },
+        {
+            "name": "Fangs",
+            "tier": 3
+        },
+        {
+            "name": "Flickering Blade",
+            "tier": 3
+        },
+        {
+            "name": "Foil",
+            "tier": 3
+        },
+        {
+            "name": "Full Moon",
+            "tier": 3
+        },
+        {
+            "name": "Golden Cup",
+            "tier": 3
+        },
+        {
+            "name": "Incense",
+            "tier": 3
+        },
+        {
+            "name": "Iron Pendant",
+            "tier": 3
+        },
+        {
+            "name": "Juice",
+            "tier": 3
+        },
+        {
+            "name": "Kilt",
+            "tier": 3
+        },
+        {
+            "name": "Ladder",
+            "tier": 3
+        },
+        {
+            "name": "Lead Boots",
+            "tier": 3
+        },
+        {
+            "name": "Learn Flare",
+            "tier": 3
+        },
+        {
+            "name": "Learn Heat",
+            "tier": 3
+        },
+        {
+            "name": "Learn Sprout",
+            "tier": 3
+        },
+        {
+            "name": "Lich Finger",
+            "tier": 3
+        },
+        {
+            "name": "Lightning Rod",
+            "tier": 3
+        },
+        {
+            "name": "Longbow",
+            "tier": 3
+        },
+        {
+            "name": "Magnet",
+            "tier": 3
+        },
+        {
+            "name": "Mana Bomb",
+            "tier": 3
+        },
+        {
+            "name": "Obol",
+            "tier": 3
+        },
+        {
+            "name": "Pocket Phylactery",
+            "tier": 3
+        },
+        {
+            "name": "Poem",
+            "tier": 3
+        },
+        {
+            "name": "Polearm",
+            "tier": 3
+        },
+        {
+            "name": "Pure Heart Pendant",
+            "tier": 3
+        },
+        {
+            "name": "Relic",
+            "tier": 3
+        },
+        {
+            "name": "Ritual Dagger",
+            "tier": 3
+        },
+        {
+            "name": "Scalpel",
+            "tier": 3
+        },
+        {
+            "name": "Siphon",
+            "tier": 3
+        },
+        {
+            "name": "Smelly Manure",
+            "tier": 3
+        },
+        {
+            "name": "Terrarium",
+            "tier": 3
+        },
+        {
+            "name": "Three of a Kind",
+            "tier": 3
+        },
+        {
+            "name": "Unholy Strength",
+            "tier": 3
+        },
+        {
+            "name": "Viscera",
+            "tier": 3
+        },
+        {
+            "name": "Whetstone",
+            "tier": 3
+        },
+        {
+            "name": "Alembic",
+            "tier": 4
+        },
+        {
+            "name": "Apple",
+            "tier": 4
+        },
+        {
+            "name": "Bonesaw",
+            "tier": 4
+        },
+        {
+            "name": "Cart",
+            "tier": 4
+        },
+        {
+            "name": "Chainmail",
+            "tier": 4
+        },
+        {
+            "name": "Chakram",
+            "tier": 4
+        },
+        {
+            "name": "Charged Skull",
+            "tier": 4
+        },
+        {
+            "name": "Cocoon",
+            "tier": 4
+        },
+        {
+            "name": "Corruption",
+            "tier": 4
+        },
+        {
+            "name": "Demon Eye",
+            "tier": 4
+        },
+        {
+            "name": "Duelling Pistol",
+            "tier": 4
+        },
+        {
+            "name": "Enchanted Shield",
+            "tier": 4
+        },
+        {
+            "name": "Eyepatch",
+            "tier": 4
+        },
+        {
+            "name": "Faerie Pact",
+            "tier": 4
+        },
+        {
+            "name": "Flawed Diamond",
+            "tier": 4
+        },
+        {
+            "name": "Gizmo",
+            "tier": 4
+        },
+        {
+            "name": "Glass Blade",
+            "tier": 4
+        },
+        {
+            "name": "Glowing Egg",
+            "tier": 4
+        },
+        {
+            "name": "Harpoon",
+            "tier": 4
+        },
+        {
+            "name": "Hissing Ring",
+            "tier": 4
+        },
+        {
+            "name": "Ink Bottle",
+            "tier": 4
+        },
+        {
+            "name": "Inner Strength",
+            "tier": 4
+        },
+        {
+            "name": "Jester Cap",
+            "tier": 4
+        },
+        {
+            "name": "Learn Beam",
+            "tier": 4
+        },
+        {
+            "name": "Learn Hack",
+            "tier": 4
+        },
+        {
+            "name": "Learn Hex",
+            "tier": 4
+        },
+        {
+            "name": "Learn Invest",
+            "tier": 4
+        },
+        {
+            "name": "Learn Mark",
+            "tier": 4
+        },
+        {
+            "name": "Life Bolt",
+            "tier": 4
+        },
+        {
+            "name": "Mana Jelly",
+            "tier": 4
+        },
+        {
+            "name": "Pauldron",
+            "tier": 4
+        },
+        {
+            "name": "Pulley",
+            "tier": 4
+        },
+        {
+            "name": "Red flag",
+            "tier": 4
+        },
+        {
+            "name": "Shortsword",
+            "tier": 4
+        },
+        {
+            "name": "Shuriken",
+            "tier": 4
+        },
+        {
+            "name": "Splitting Arrows",
+            "tier": 4
+        },
+        {
+            "name": "Troll Nose",
+            "tier": 4
+        },
+        {
+            "name": "Updog",
+            "tier": 4
+        },
+        {
+            "name": "Whiskers",
+            "tier": 4
+        },
+        {
+            "name": "Wristblade",
+            "tier": 4
+        },
+        {
+            "name": "Ambrosia",
+            "tier": 5
+        },
+        {
+            "name": "Bag of Holding",
+            "tier": 5
+        },
+        {
+            "name": "Bandana",
+            "tier": 5
+        },
+        {
+            "name": "Candle",
+            "tier": 5
+        },
+        {
+            "name": "Cauldron",
+            "tier": 5
+        },
+        {
+            "name": "Cracked Plate",
+            "tier": 5
+        },
+        {
+            "name": "Cracked Wheel",
+            "tier": 5
+        },
+        {
+            "name": "Crystallise",
+            "tier": 5
+        },
+        {
+            "name": "Decree",
+            "tier": 5
+        },
+        {
+            "name": "Demon Horn",
+            "tier": 5
+        },
+        {
+            "name": "Determination",
+            "tier": 5
+        },
+        {
+            "name": "Door",
+            "tier": 5
+        },
+        {
+            "name": "Dragonhide Gloves",
+            "tier": 5
+        },
+        {
+            "name": "Early Grave",
+            "tier": 5
+        },
+        {
+            "name": "Enchanted Harp",
+            "tier": 5
+        },
+        {
+            "name": "Enhance Wand",
+            "tier": 5
+        },
+        {
+            "name": "Erythrocyte",
+            "tier": 5
+        },
+        {
+            "name": "Fearless",
+            "tier": 5
+        },
+        {
+            "name": "Glyph of Purity",
+            "tier": 5
+        },
+        {
+            "name": "Justice",
+            "tier": 5
+        },
+        {
+            "name": "Lens",
+            "tier": 5
+        },
+        {
+            "name": "Longsword",
+            "tier": 5
+        },
+        {
+            "name": "Magic Staff",
+            "tier": 5
+        },
+        {
+            "name": "Mini Crossbow",
+            "tier": 5
+        },
+        {
+            "name": "Monocle",
+            "tier": 5
+        },
+        {
+            "name": "Natural",
+            "tier": 5
+        },
+        {
+            "name": "Nunchaku",
+            "tier": 5
+        },
+        {
+            "name": "Ordinary Triangle",
+            "tier": 5
+        },
+        {
+            "name": "Polished Emerald",
+            "tier": 5
+        },
+        {
+            "name": "Poodle",
+            "tier": 5
+        },
+        {
+            "name": "Ruby",
+            "tier": 5
+        },
+        {
+            "name": "Sack of Mana",
+            "tier": 5
+        },
+        {
+            "name": "Sceptre",
+            "tier": 5
+        },
+        {
+            "name": "Shimmering Halo",
+            "tier": 5
+        },
+        {
+            "name": "Shining Bow",
+            "tier": 5
+        },
+        {
+            "name": "Simplicity",
+            "tier": 5
+        },
+        {
+            "name": "Sling",
+            "tier": 5
+        },
+        {
+            "name": "Soup",
+            "tier": 5
+        },
+        {
+            "name": "Tiara",
+            "tier": 5
+        },
+        {
+            "name": "Treasure Chest",
+            "tier": 5
+        },
+        {
+            "name": "Wand Grips",
+            "tier": 5
+        },
+        {
+            "name": "Water",
+            "tier": 5
+        },
+        {
+            "name": "Whiskey",
+            "tier": 5
+        },
+        {
+            "name": "Blindfold",
+            "tier": 6
+        },
+        {
+            "name": "Blinding Bolt",
+            "tier": 6
+        },
+        {
+            "name": "Blood Amulet",
+            "tier": 6
+        },
+        {
+            "name": "Braids",
+            "tier": 6
+        },
+        {
+            "name": "Burning Halo",
+            "tier": 6
+        },
+        {
+            "name": "Catnip",
+            "tier": 6
+        },
+        {
+            "name": "Conduit",
+            "tier": 6
+        },
+        {
+            "name": "Crescent Shield",
+            "tier": 6
+        },
+        {
+            "name": "Demon Claw",
+            "tier": 6
+        },
+        {
+            "name": "Demonic Deal",
+            "tier": 6
+        },
+        {
+            "name": "Ghost Shield",
+            "tier": 6
+        },
+        {
+            "name": "Honeycomb",
+            "tier": 6
+        },
+        {
+            "name": "InfiniHeal",
+            "tier": 6
+        },
+        {
+            "name": "Jump",
+            "tier": 6
+        },
+        {
+            "name": "Karma",
+            "tier": 6
+        },
+        {
+            "name": "Katar",
+            "tier": 6
+        },
+        {
+            "name": "Kite Shield",
+            "tier": 6
+        },
+        {
+            "name": "Leaden Handle",
+            "tier": 6
+        },
+        {
+            "name": "Learn Luck",
+            "tier": 6
+        },
+        {
+            "name": "Lich Eye",
+            "tier": 6
+        },
+        {
+            "name": "Ocular Amulet",
+            "tier": 6
+        },
+        {
+            "name": "Scales",
+            "tier": 6
+        },
+        {
+            "name": "Silver Pendant",
+            "tier": 6
+        },
+        {
+            "name": "Sponge",
+            "tier": 6
+        },
+        {
+            "name": "Tie",
+            "tier": 6
+        },
+        {
+            "name": "Tooth Necklace",
+            "tier": 6
+        },
+        {
+            "name": "Troll Blood",
+            "tier": 6
+        },
+        {
+            "name": "Twisted Flax",
+            "tier": 6
+        },
+        {
+            "name": "Urn",
+            "tier": 6
+        },
+        {
+            "name": "Wand of Stun",
+            "tier": 6
+        },
+        {
+            "name": "Wedding Rings",
+            "tier": 6
+        },
+        {
+            "name": "Wooden Bracelet",
+            "tier": 6
+        },
+        {
+            "name": "Wrench",
+            "tier": 6
+        },
+        {
+            "name": "Anvil",
+            "tier": 7
+        },
+        {
+            "name": "Botany",
+            "tier": 7
+        },
+        {
+            "name": "Brimstone",
+            "tier": 7
+        },
+        {
+            "name": "Broadsword",
+            "tier": 7
+        },
+        {
+            "name": "Charge Link",
+            "tier": 7
+        },
+        {
+            "name": "Dragon Pipe",
+            "tier": 7
+        },
+        {
+            "name": "Duck",
+            "tier": 7
+        },
+        {
+            "name": "Eucalyptus",
+            "tier": 7
+        },
+        {
+            "name": "Flute",
+            "tier": 7
+        },
+        {
+            "name": "Glass Heart",
+            "tier": 7
+        },
+        {
+            "name": "Hourglass",
+            "tier": 7
+        },
+        {
+            "name": "Ichor Chalice",
+            "tier": 7
+        },
+        {
+            "name": "Iron Helm",
+            "tier": 7
+        },
+        {
+            "name": "Jewel Loupe",
+            "tier": 7
+        },
+        {
+            "name": "Learn Charge",
+            "tier": 7
+        },
+        {
+            "name": "Metal Studs",
+            "tier": 7
+        },
+        {
+            "name": "Mushroom",
+            "tier": 7
+        },
+        {
+            "name": "Ogre Blood",
+            "tier": 7
+        },
+        {
+            "name": "Pair of Kings",
+            "tier": 7
+        },
+        {
+            "name": "Pocket Mirror",
+            "tier": 7
+        },
+        {
+            "name": "Second Chance",
+            "tier": 7
+        },
+        {
+            "name": "Sharp Wit",
+            "tier": 7
+        },
+        {
+            "name": "Sparks",
+            "tier": 7
+        },
+        {
+            "name": "Tentacle",
+            "tier": 7
+        },
+        {
+            "name": "Thimble",
+            "tier": 7
+        },
+        {
+            "name": "Twisted Bar",
+            "tier": 7
+        },
+        {
+            "name": "Two Reeds",
+            "tier": 7
+        },
+        {
+            "name": "Wandcraft",
+            "tier": 7
+        },
+        {
+            "name": "Wine",
+            "tier": 7
+        },
+        {
+            "name": "Boots of Speed",
+            "tier": 8
+        },
+        {
+            "name": "Bullseye",
+            "tier": 8
+        },
+        {
+            "name": "Deadly Bolt",
+            "tier": 8
+        },
+        {
+            "name": "Faerie Dust",
+            "tier": 8
+        },
+        {
+            "name": "Gauntlet",
+            "tier": 8
+        },
+        {
+            "name": "Greatsword",
+            "tier": 8
+        },
+        {
+            "name": "Holy Book",
+            "tier": 8
+        },
+        {
+            "name": "Iron Crown",
+            "tier": 8
+        },
+        {
+            "name": "Ironblood Pendant",
+            "tier": 8
+        },
+        {
+            "name": "Learn Spark",
+            "tier": 8
+        },
+        {
+            "name": "Lion",
+            "tier": 8
+        },
+        {
+            "name": "Mirror Mask",
+            "tier": 8
+        },
+        {
+            "name": "Olympian Trident",
+            "tier": 8
+        },
+        {
+            "name": "Ornate Hilt",
+            "tier": 8
+        },
+        {
+            "name": "Prism",
+            "tier": 8
+        },
+        {
+            "name": "Sapphire Ring",
+            "tier": 8
+        },
+        {
+            "name": "Scorpion Tail",
+            "tier": 8
+        },
+        {
+            "name": "Sickle",
+            "tier": 8
+        },
+        {
+            "name": "Singularity",
+            "tier": 8
+        },
+        {
+            "name": "Standard",
+            "tier": 8
+        },
+        {
+            "name": "Sushi",
+            "tier": 8
+        },
+        {
+            "name": "Tourmaline Paraiba",
+            "tier": 8
+        },
+        {
+            "name": "Tusk",
+            "tier": 8
+        },
+        {
+            "name": "Angel Feather",
+            "tier": 9
+        },
+        {
+            "name": "Boarhide Bracers",
+            "tier": 9
+        },
+        {
+            "name": "Chaos Wand",
+            "tier": 9
+        },
+        {
+            "name": "Charged Hammer",
+            "tier": 9
+        },
+        {
+            "name": "Collar",
+            "tier": 9
+        },
+        {
+            "name": "Dumbbell",
+            "tier": 9
+        },
+        {
+            "name": "Egg Basket",
+            "tier": 9
+        },
+        {
+            "name": "Emerald Mirror",
+            "tier": 9
+        },
+        {
+            "name": "Eye of Horus",
+            "tier": 9
+        },
+        {
+            "name": "Helm of Power",
+            "tier": 9
+        },
+        {
+            "name": "Horned Viper",
+            "tier": 9
+        },
+        {
+            "name": "Overflowing Chalice",
+            "tier": 9
+        },
+        {
+            "name": "Poison Dip",
+            "tier": 9
+        },
+        {
+            "name": "Second Heart",
+            "tier": 9
+        },
+        {
+            "name": "Serration",
+            "tier": 9
+        },
+        {
+            "name": "Shiny Gauntlets",
+            "tier": 9
+        },
+        {
+            "name": "Silk Cape",
+            "tier": 9
+        },
+        {
+            "name": "Spike Stone",
+            "tier": 9
+        },
+        {
+            "name": "Timestone",
+            "tier": 9
+        },
+        {
+            "name": "Triple Shuriken",
+            "tier": 9
+        },
+        {
+            "name": "Wax Seal",
+            "tier": 9
+        }
+    ]
+}
