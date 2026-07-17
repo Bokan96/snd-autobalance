@@ -918,6 +918,7 @@
                 gap: 8px;
             }
             .draft-vs { display: none; }
+            .draft-hint { display: none; }
             
             /* Compact horizontal cards for mobile */
             .item-card {
@@ -1032,9 +1033,9 @@
 
 
             <div class="info-actions">
-                <button class="btn btn-ghost" onclick="showPage('page-landing')">← BACK</button>
                 <button class="btn btn-ghost" onclick="showPage('page-paste')" style="border-color:var(--border-lit);">📋 PASTE PICK RATE</button>
                 <button class="btn btn-accent" onclick="startDraft()">▶ DRAFT MODE</button>
+                <button class="btn btn-ghost" onclick="showPage('page-landing')">← BACK</button>
             </div>
         </div>
     </div>
@@ -1219,8 +1220,8 @@
         </div>
 
         <div class="stats-actions">
-            <button class="btn btn-ghost" onclick="showPage('page-items-info')">← BACK TO MOD INFO</button>
             <button class="btn btn-accent" onclick="startDraft()">▶ NEW DRAFT</button>
+            <button class="btn btn-ghost" onclick="showPage('page-items-info')">← BACK TO MOD INFO</button>
         </div>
     </div>
 </section>
@@ -1351,7 +1352,7 @@ function setStatsView(viewMode) {
 // ═══════════════════════════════════════════════════════
 function getNextTriplet(tierNum) {
     const isBest = draftState.phase === 'BEST';
-    const pool = ITEMS_DB.filter(i => {
+    let pool = ITEMS_DB.filter(i => {
         if (i.tier !== tierNum) return false;
         const state = draftState.items[i.name];
         if (isBest) {
@@ -1360,6 +1361,15 @@ function getNextTriplet(tierNum) {
             return state.worstSkipped < 2 && state.worstPicked < 4;
         }
     });
+
+    if (!isBest) {
+        // Exclude top 20% most picked from the BEST phase
+        const tierItems = ITEMS_DB.filter(i => i.tier === tierNum);
+        tierItems.sort((a, b) => draftState.items[b.name].bestPicked - draftState.items[a.name].bestPicked);
+        const excludeCount = Math.ceil(tierItems.length * 0.2);
+        const excludeNames = new Set(tierItems.slice(0, excludeCount).map(i => i.name));
+        pool = pool.filter(i => !excludeNames.has(i.name));
+    }
 
     if (pool.length < 3) {
         return pool; // Let loadNextPair handle transition
