@@ -1,0 +1,28 @@
+﻿--- draft-round ---
+  L479:         .draft-round-info {
+  L483:         .draft-round-info strong {
+  L1081:             <div class="draft-round-info"><strong id="draft-round-cur">ù</strong> <strong id="draft-round-max">items left</strong>
+  L1468:     document.getElementById('draft-round-cur').textContent = poolRemaining;
+
+--- poolRemaining ---
+  L1460:     const poolRemaining = ITEMS_DB.filter(i => {
+  L1468:     document.getElementById('draft-round-cur').textContent = poolRemaining;
+
+--- showTierRankings ---
+  L1746: function showTierRankings() {
+
+--- exitDraft ---
+python : Traceback (most recent call last):
+At line:1 char:1
++ python search_html.py 2>&1 | Out-File -Encoding utf8 search_out.txt;  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Github Repositories\snd-autobalance\search_html.py", line 15, in <module>
+    print(f'  L{ln}: {txt[:130]}')
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Boki\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2190' in position 121: character maps to <undefined>
