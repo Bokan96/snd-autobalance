@@ -1227,44 +1227,11 @@
             <p id="stats-subtitle">Draft complete — here are your item preferences</p>
         </div>
 
-        <!-- Stats View Tab Toggles & Reset -->
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;border-bottom:2px solid var(--border);padding-bottom:12px;gap:12px;flex-wrap:wrap;">
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                <button class="btn btn-accent" id="btn-stats-alltime" onclick="setStatsView('alltime')" style="padding:8px 16px;font-size:12px;">ALL-TIME STATS (ELO RANKED)</button>
-                <button class="btn btn-ghost" id="btn-stats-session" onclick="setStatsView('session')" style="padding:8px 16px;font-size:12px;">CURRENT SESSION (PICK %)</button>
-            </div>
-            <button class="btn btn-ghost" onclick="confirmResetAllTime()" style="padding:8px 16px;font-size:12px;color:var(--red);border-color:var(--red);opacity:0.8;">⚠ RESET ALL-TIME</button>
-        </div>
-
-        <!-- Overview numbers -->
-        <div class="stats-overview" id="stats-overview"></div>
-
-        <!-- Top performers -->
+        <!-- Session Results -->
         <div class="stats-section">
-            <h2>🏆 Top Performing Items</h2>
-            <div class="podium-list" id="stats-top"></div>
-        </div>
-
-        <!-- Worst performers -->
-        <div class="stats-section">
-            <h2>📉 Most Skipped Items</h2>
-            <div class="podium-list" id="stats-worst"></div>
-        </div>
-
-        <!-- Per-tier breakdown -->
-        <div class="stats-section">
-            <h2>📋 Full Item Breakdown</h2>
-            <div style="border:2px solid var(--border);overflow:hidden;">
-                <table class="tier-table" id="stats-table">
-                    <thead>
-                        <tr>
-                            <th>Tier</th>
-                            <th>Item</th>
-                            <th>Offered</th>
-                            <th>Picked</th>
-                            <th>Pick %</th>
-                        </tr>
-                    </thead>
+            <h2>📋 Tier Adjustments</h2>
+            <div style="border:2px solid var(--border);border-radius:10px;background:var(--bg);overflow:hidden;">
+                <table class="tier-table" id="stats-table" style="width:100%;border-collapse:collapse;">
                     <tbody id="stats-table-body"></tbody>
                 </table>
             </div>
@@ -1365,8 +1332,9 @@ function initDraftState() {
     const state = {
         currentTier: 1,
         tierRound: 0,
-        buffCarryOvers: [],   // Items buffed -1 tier (carry to next tier)
-        buff2CarryOvers: [],  // Items buffed -2 tiers (carry 2 tiers ahead)
+        nerfCarryOvers: [],   // Items buffed -1 tier (carry to next tier)
+        nerf2CarryOvers: [],  // Items buffed -2 tiers (carry 2 tiers ahead)
+        finalAdjustments: [], // Tracks all nerfs and buffs for final results
         items: {},   // name -> { offered, picked, skipped }
         pairA: null,
         pairB: null,
@@ -1403,8 +1371,8 @@ function setStatsView(viewMode) {
 function getNextTriplet(tierNum) {
     let pool = ITEMS_DB.filter(i => {
         if (i.tier !== tierNum
-            && !draftState.buffCarryOvers.includes(i.name)
-            && !draftState.buff2CarryOvers.includes(i.name)) return false;
+            && !draftState.nerfCarryOvers.includes(i.name)
+            && !draftState.nerf2CarryOvers.includes(i.name)) return false;
         const state = draftState.items[i.name];
         return state.skipped < 5 && state.picked < 5;
     });
@@ -1458,6 +1426,7 @@ function getNextTriplet(tierNum) {
 // DRAFT UI
 // ═══════════════════════════════════════════════════════
 function startDraft() {
+    localStorage.removeItem(STORAGE_KEY); // Wipe all-time stats before draft starts
     draftState = initDraftState();
     showPage('page-draft');
     buildTierDots();
@@ -1642,8 +1611,8 @@ function showTierReview() {
     // Get all items offered in this tier's pool
     let tierItems = ITEMS_DB.filter(i => {
         if (i.tier !== tier
-            && !draftState.buffCarryOvers.includes(i.name)
-            && !draftState.buff2CarryOvers.includes(i.name)) return false;
+            && !draftState.nerfCarryOvers.includes(i.name)
+            && !draftState.nerf2CarryOvers.includes(i.name)) return false;
         return draftState.items[i.name].offered > 0;
     });
     tierItems.sort((a, b) => pStats[b.name].eloBest - pStats[a.name].eloBest);
@@ -1767,19 +1736,35 @@ function confirmTierReview() {
         for (let i = buff2Idx + 1; i < elements.length; i++)
             if (elements[i].dataset.name) buff2Items.push(elements[i].dataset.name);
 
-    draftState.buffCarryOvers  = buffItems;
-    draftState.buff2CarryOvers = buff2Items;
-
     const tier = draftState.currentTier;
+    
+    // Save to final adjustments
+    const nerfIdx = elements.findIndex(el => el.dataset.type === 'nerf');
+    const nerfItems = [];
+    if (nerfIdx >= 0) {
+        for (let i = 0; i < nerfIdx; i++) {
+            if (elements[i].dataset.name) {
+                nerfItems.push(elements[i].dataset.name);
+                draftState.finalAdjustments.push({
+                    name: elements[i].dataset.name, 
+                    type: 'nerf', 
+                    tier: tier
+                });
+            }
+        }
+    }
+    
+    buffItems.forEach(name => draftState.finalAdjustments.push({name, type: 'buff', tier}));
+    buff2Items.forEach(name => draftState.finalAdjustments.push({name, type: 'buff2', tier}));
+
+    // Logic Fix: Carry over the NERFED items to the next tier (since they are too strong and should move up)
+    draftState.nerfCarryOvers = nerfItems;
+
     if (tier >= TOTAL_TIERS) {
         showStats(false);
     } else {
         draftState.currentTier++;
         draftState.tierRound = 0;
-        // Promote buff2 -> buff1 after one tier
-        const promoted = draftState.buff2CarryOvers;
-        draftState.buff2CarryOvers = [];
-        draftState.buffCarryOvers = [...draftState.buffCarryOvers, ...promoted];
         loadNextPair();
     }
 }
@@ -1792,8 +1777,8 @@ function showTierRankings() {
     );
     let pool = ITEMS_DB.filter(i =>
         i.tier === draftState.currentTier
-        || draftState.buffCarryOvers.includes(i.name)
-        || draftState.buff2CarryOvers.includes(i.name)
+        || draftState.nerfCarryOvers.includes(i.name)
+        || draftState.nerf2CarryOvers.includes(i.name)
     );
     pool.sort((a, b) => pStats[b.name].eloBest - pStats[a.name].eloBest);
 
@@ -1804,11 +1789,11 @@ function showTierRankings() {
         el.className = 'tier-list-item';
         const isNow = offered.has(item.name);
         if (isNow) {
-            el.style.background = 'rgba(200,168,75,0.12)';
+            el.style.background = 'rgba(200,168,75,0.02)';
             el.style.borderColor = 'var(--accent)';
-            el.style.boxShadow  = '0 0 6px rgba(200,168,75,0.25)';
+            el.style.boxShadow  = '0 0 6px rgba(200,168,75,0.15)';
         }
-        el.innerHTML = '<span>' + (isNow ? '▶ ' : '') + '#' + (index+1) + '. ' + item.name + '</span>'
+        el.innerHTML = '<span>' + (index+1) + '. ' + item.name + '</span>'
                      + '<span style="color:var(--accent);">' + pStats[item.name].eloBest + ' Elo</span>';
         list.appendChild(el);
     });
@@ -1824,107 +1809,37 @@ function showStats(stayOnPage) {
         showPage('page-stats');
     }
 
-    const pStats = loadPersistentStats();
-    const useAllTime = (currentStatsView === 'alltime');
+    document.getElementById('stats-subtitle').textContent = 'Draft complete — here are your final item adjustments';
     
-    document.getElementById('stats-subtitle').textContent = useAllTime
-        ? 'All-Time persistent rankings based on matchups & Elo rating'
-        : 'Current draft session performance based on pick %';
-
-    // 1. Map data for statistics calculations
-    const results = ITEMS_DB.map(item => {
-        if (useAllTime) {
-            const s = pStats[item.name];
-            return {
-                ...item,
-                offered: s.offered,
-                picked: s.picked,
-                eloBest: s.eloBest,
-                eloWorst: s.eloWorst
-            };
-        } else {
-            const s = (draftState ? draftState.items[item.name] : { offered: 0, picked: 0 });
-            return {
-                ...item,
-                offered: s.offered || 0,
-                picked: s.picked || 0,
-                eloBest: DEFAULT_ELO,
-                eloWorst: DEFAULT_ELO
-            };
-        }
-    });
-
-    // 2. Render Overview boxes
-    const totalOffered = results.reduce((acc, r) => acc + r.offered, 0);
-    const totalPicked = results.reduce((acc, r) => acc + r.picked, 0);
-    const itemsWithData = results.filter(r => r.offered > 0).length;
-
-    const overviewEl = document.getElementById('stats-overview');
-    overviewEl.innerHTML = `
-        <div class="stat-box"><span class="stat-box__num">${totalOffered}</span><div class="stat-box__label">Total Offerings</div></div>
-        <div class="stat-box"><span class="stat-box__num">${totalPicked}</span><div class="stat-box__label">Total Picks</div></div>
-        <div class="stat-box"><span class="stat-box__num">${itemsWithData}</span><div class="stat-box__label">Items Seen</div></div>
-        <div class="stat-box"><span class="stat-box__num">${useAllTime ? 'ELO' : (totalOffered > 0 ? Math.round(totalPicked/totalOffered*100) + '%' : '0%')}</span><div class="stat-box__label">${useAllTime ? 'Rating Method' : 'Overall Pick Rate'}</div></div>
-    `;
-
-    // 3. Podium lists (Top 5 Best / Top 5 Worst)
-    const minOfferThreshold = useAllTime ? 2 : 1;
-    const qualified = results.filter(r => r.offered >= minOfferThreshold);
-    
-    // Sort
-    let top5;
-    let worst5;
-    if (useAllTime) {
-        // Best: highest eloBest
-        top5 = [...qualified].sort((a, b) => b.eloBest - a.eloBest).slice(0, 5);
-        // Worst: lowest eloWorst
-        worst5 = [...qualified].sort((a, b) => a.eloWorst - b.eloWorst).slice(0, 5);
-    } else {
-        // Session: Since we don't have Elo, maybe we just don't show or we use simple rate. 
-        // We'll just show empty or a placeholder for session stats if it's too complex.
-        top5 = [];
-        worst5 = [];
-    }
-
-    // Render podium lists
-    document.getElementById('stats-top').innerHTML = renderPodium(top5, false, useAllTime);
-    document.getElementById('stats-worst').innerHTML = renderPodium(worst5, true, useAllTime);
-
-    // 4. Render full table breakdown
     const tbody = document.getElementById('stats-table-body');
     
-    // Sort table: sort by tier first, then by bestElo descending
-    const tableData = [...results].filter(r => r.offered > 0).sort((a, b) => {
-        if (a.tier !== b.tier) return a.tier - b.tier;
-        return b.eloBest - a.eloBest;
-    });
-
-    // Update table header column for last column
-    const tableHeaderLastCol = document.querySelector('#stats-table th:last-child');
-    if (tableHeaderLastCol) {
-        tableHeaderLastCol.textContent = useAllTime ? 'Best / Worst Elo' : 'N/A';
-    }
-
-    tbody.innerHTML = tableData.map(r => {
-        const displayValue = useAllTime 
-            ? `${r.eloBest} / ${r.eloWorst}`
-            : `N/A`;
+    if (draftState && draftState.finalAdjustments && draftState.finalAdjustments.length > 0) {
+        tbody.innerHTML = draftState.finalAdjustments.map(adj => {
+            let color = '';
+            let newTier = adj.tier;
+            if (adj.type === 'nerf') { 
+                color = '#e53935'; 
+                newTier = adj.tier + 1;
+            } else if (adj.type === 'buff') { 
+                color = '#4caf50'; 
+                newTier = adj.tier - 1;
+            } else if (adj.type === 'buff2') { 
+                color = '#4caf50'; 
+                newTier = adj.tier - 2;
+            }
             
-        let rateClass = 'mid';
-        if (useAllTime) {
-            if (r.eloBest >= 1250) rateClass = 'high';
-            else if (r.eloBest <= 1150) rateClass = 'low';
-        }
-        return `
-            <tr>
-                <td class="t-tier">T${r.tier}</td>
-                <td class="t-name">${r.name}</td>
-                <td>${r.offered}</td>
-                <td>${r.picked}</td>
-                <td class="t-rate ${rateClass}">${displayValue}</td>
-            </tr>
-        `;
-    }).join('');
+            return `
+                <tr>
+                    <td style="padding:10px 16px; display:flex; align-items:center; gap:12px;">
+                        <img src="icons/items/${adj.name}.png" style="width:28px;height:28px;object-fit:contain;" onerror="this.style.display='none'">
+                        <span style="color:${color}; font-size:15px; font-weight:bold;">${adj.name} Tier ${newTier}</span>
+                    </td>
+                </tr>
+            `;
+        }).join('');
+    } else {
+        tbody.innerHTML = `<tr><td style="text-align:center;color:var(--text-muted);padding:20px;">No buffs or nerfs recorded yet.</td></tr>`;
+    }
 }
 
 function renderPodium(items, isWorst, useElo) {
