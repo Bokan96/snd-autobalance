@@ -1200,6 +1200,7 @@
         </div>
 
         <p class="draft-hint">PRESS A, S OR D OR MOUSE CLICK TO CHOOSE</p>
+        <button class="btn btn-ghost" onclick="skipTier()" style="margin:20px auto 0; display:block; padding:8px 24px; font-size:12px;">SKIP THIS TIER</button>
     </div>
 
     <!-- Tier transition / review screen (overlays the arena) -->
@@ -1425,6 +1426,10 @@ function getNextTriplet(tierNum) {
 // ═══════════════════════════════════════════════════════
 // DRAFT UI
 // ═══════════════════════════════════════════════════════
+function skipTier() {
+    showTierReview();
+}
+
 function startDraft() {
     localStorage.removeItem(STORAGE_KEY); // Wipe all-time stats before draft starts
     draftState = initDraftState();
@@ -1760,6 +1765,16 @@ function confirmTierReview() {
     // Logic Fix: Carry over the NERFED items to the next tier (since they are too strong and should move up)
     draftState.nerfCarryOvers = nerfItems;
 
+    // Reset Elo for nerfed items that are carried over to the next tier
+    const pStats = loadPersistentStats();
+    nerfItems.forEach(item => {
+        if (pStats[item]) {
+            pStats[item].eloBest = DEFAULT_ELO;
+            pStats[item].eloWorst = DEFAULT_ELO;
+        }
+    });
+    savePersistentStats(pStats);
+
     if (tier >= TOTAL_TIERS) {
         showStats(false);
     } else {
@@ -1793,7 +1808,7 @@ function showTierRankings() {
             el.style.borderColor = 'var(--accent)';
             el.style.boxShadow  = '0 0 6px rgba(200,168,75,0.15)';
         }
-        el.innerHTML = '<span>' + (index+1) + '. ' + item.name + '</span>'
+        el.innerHTML = '<span>' + (index+1) + '. <img src="icons/items/' + item.name + '.png" style="width:18px;height:18px;vertical-align:middle;margin:0 6px 0 2px;" onerror="this.style.display=\'none\'">' + item.name + '</span>'
                      + '<span style="color:var(--accent);">' + pStats[item.name].eloBest + ' Elo</span>';
         list.appendChild(el);
     });
@@ -2030,7 +2045,7 @@ function showError(msg) {
 <div id="rankings-modal" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9999;display:flex;align-items:center;justify-content:center;" onclick="if(event.target===this)this.classList.add('hidden')">
     <div style="background:var(--surface,#1e1e1e);border:1px solid var(--border,#333);border-radius:14px;padding:24px 20px;width:340px;max-height:80vh;display:flex;flex-direction:column;gap:12px;">
         <div style="display:flex;align-items:center;justify-content:space-between;">
-            <h3 style="margin:0;font-size:15px;letter-spacing:1px;">TIER ELO RANKINGS</h3>
+            <h3 style="margin:0;font-size:15px;letter-spacing:1px;">CURRENT TIER RANKINGS</h3>
             <button class="btn btn-ghost" style="padding:4px 10px;font-size:12px;" onclick="document.getElementById('rankings-modal').classList.add('hidden')">✕</button>
         </div>
         <div id="rankings-list" style="overflow-y:auto;max-height:60vh;display:flex;flex-direction:column;gap:4px;"></div>
