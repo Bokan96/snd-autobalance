@@ -514,6 +514,11 @@
         }
         .draggable-item:hover { background: var(--surface-2, #2a2a2a); }
         .draggable-item.dragging { opacity: 0.4; }
+        .draggable-item.selected-for-move, .separator.selected-for-move {
+            border: 2px solid var(--accent) !important;
+            box-shadow: 0 0 8px var(--accent);
+            transform: scale(1.02);
+        }
         .item-nerf  { background: rgba(220,50,50,0.10) !important; }
         .item-buff  { background: rgba(50,180,80,0.10) !important; }
         .item-buff2 { background: rgba(50,150,220,0.08) !important; }
@@ -1700,11 +1705,31 @@ function updateReviewColors(container) {
 }
 
 function setupDragAndDrop(container) {
+    let selectedEl = null;
+
     container.querySelectorAll('[draggable="true"]').forEach(el => {
         el.addEventListener('dragstart', () => el.classList.add('dragging'));
         el.addEventListener('dragend', () => {
             el.classList.remove('dragging');
             updateReviewColors(container);
+        });
+
+        // Click/Tap to move fallback for mobile
+        el.addEventListener('click', () => {
+            if (el.classList.contains('dragging')) return;
+
+            if (!selectedEl) {
+                selectedEl = el;
+                el.classList.add('selected-for-move');
+            } else if (selectedEl === el) {
+                selectedEl.classList.remove('selected-for-move');
+                selectedEl = null;
+            } else {
+                selectedEl.classList.remove('selected-for-move');
+                container.insertBefore(selectedEl, el);
+                selectedEl = null;
+                updateReviewColors(container);
+            }
         });
     });
     container.addEventListener('dragover', e => {
