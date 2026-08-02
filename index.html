@@ -1249,6 +1249,122 @@
             }
         }
 
+        /* ═══════════════════════════════════════════════════════════
+           PAGE: MANUAL SET
+        ═══════════════════════════════════════════════════════════ */
+        #page-manual-set {
+            align-items: stretch;
+            justify-content: flex-start;
+            padding: 0;
+        }
+
+        .manual-header {
+            border-bottom: 2px solid var(--border);
+            background: var(--bg2);
+            padding: 16px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .manual-header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .manual-header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .manual-arena {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            gap: 20px;
+        }
+
+        .manual-set-item-card {
+            border: 2px solid var(--accent);
+            background: var(--bg2);
+            padding: 32px 28px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 480px;
+            gap: 12px;
+        }
+
+        .manual-tier-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            justify-content: center;
+            margin: 4px 0;
+        }
+
+        .manual-tier-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+            border: 2px solid var(--border-lit);
+            background: var(--bg);
+            color: var(--text);
+            cursor: pointer;
+            transition: border-color 0.1s, background 0.1s;
+            user-select: none;
+        }
+
+        .manual-tier-btn:hover {
+            border-color: var(--accent);
+            background: var(--bg3);
+        }
+
+        .manual-tier-btn:active {
+            transform: scale(0.93);
+        }
+
+        .manual-tier-display {
+            font-family: 'Orbitron', monospace;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--accent);
+            min-width: 100px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .manual-confirm-btn {
+            width: 100%;
+            max-width: 480px;
+        }
+
+        @media (max-width: 600px) {
+            .manual-set-item-card {
+                padding: 16px 12px;
+            }
+            #btn-manual-skip-header {
+                display: inline-block !important;
+            }
+            #btn-manual-skip-arena {
+                display: none !important;
+            }
+        }
+
         /* ─── Utility ─── */
         .hidden {
             display: none !important;
@@ -1351,14 +1467,16 @@
 
 
 
-                <div class="info-actions">
+                <div class="info-actions" style="grid-template-columns: 1fr 1fr;">
                     <button class="btn btn-ghost" onclick="showPage('page-paste')"
                         style="border-color:var(--border-lit);">📋 PASTE PICK RATE</button>
                     <button class="btn btn-accent" onclick="startDraft()">▶ DRAFT MODE</button>
                     <button class="btn btn-ghost" id="btn-copy-community" onclick="copyCommunityBalanceMod()"
                         style="border-color:var(--accent);color:var(--accent);background:rgba(200,168,75,0.08);">📋 COPY
                         COMMUNITY BALANCE MOD</button>
-                    <button class="btn btn-ghost" onclick="showPage('page-landing')">← BACK</button>
+                    <button class="btn btn-ghost" onclick="startManualSet()"
+                        style="border-color:var(--border-lit);">✏️ MANUALLY SET ALL ITEMS</button>
+                    <button class="btn btn-ghost" onclick="showPage('page-landing')" style="grid-column: 1 / -1;">← BACK</button>
                 </div>
             </div>
         </div>
@@ -1489,6 +1607,66 @@
                 <button class="btn btn-accent" onclick="confirmTierReview()">CONFIRM &amp; CONTINUE →</button>
                 <button class="btn btn-ghost" onclick="confirmTierReview(true)">SKIP TO RESULTS</button>
             </div>
+        </div>
+
+    </section>
+
+
+    <!-- ════════════════════════════════════════════════════════════════
+     PAGE 4b: MANUAL SET MODE
+════════════════════════════════════════════════════════════════ -->
+    <section id="page-manual-set" class="page">
+
+        <!-- Header bar -->
+        <div class="manual-header">
+            <div class="manual-header-left">
+                <button class="btn btn-ghost" style="padding:6px 14px;font-size:11px;" onclick="confirmExitManualSet()">←
+                    EXIT</button>
+                <button class="btn btn-ghost" id="btn-manual-skip-header" onclick="manualSkipItem()"
+                    style="padding:6px 14px;font-size:11px;margin-left:8px;display:none;">SKIP ITEM</button>
+                <div class="draft-tier-badge">TIER <span id="manual-tier-num">1</span></div>
+            </div>
+            <div class="manual-header-right">
+                <div class="tier-dots" id="manual-tier-dots"></div>
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar-track">
+                        <div class="progress-bar-fill" id="manual-progress-fill" style="width:0%"></div>
+                    </div>
+                    <div class="progress-text" id="manual-progress-text">0 / 0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main item area -->
+        <div class="manual-arena" id="manual-arena">
+            <div class="draft-prompt">// SET ITEM TIER //</div>
+
+            <div class="manual-set-item-card" id="manual-item-card">
+                <!-- Icon -->
+                <div class="item-card__icon-wrap">
+                    <img id="manual-item-icon" src="" alt=""
+                        onerror="this.style.display='none';document.getElementById('manual-item-fallback').style.display='block'">
+                    <span class="icon-fallback" id="manual-item-fallback" style="display:none;">⚗️</span>
+                </div>
+
+                <!-- Tier controls (above name) -->
+                <div class="manual-tier-controls">
+                    <button class="manual-tier-btn" onclick="adjustManualTier(-1)">−</button>
+                    <div class="manual-tier-display" id="manual-item-tier-display">TIER 1</div>
+                    <button class="manual-tier-btn" onclick="adjustManualTier(+1)">+</button>
+                </div>
+
+                <!-- Name -->
+                <div class="item-card__name" id="manual-item-name">—</div>
+                <div class="item-card__divider"></div>
+
+                <!-- Description -->
+                <div class="item-card__desc" id="manual-item-desc" style="font-size:14px;"></div>
+            </div>
+
+            <button class="btn btn-accent manual-confirm-btn" onclick="confirmManualItem()">✔ CONFIRM &amp; NEXT ITEM →</button>
+            <button class="btn btn-ghost manual-confirm-btn" id="btn-manual-skip-arena" onclick="manualSkipItem()"
+                style="margin-top:4px;">SKIP THIS ITEM</button>
         </div>
 
     </section>
@@ -1705,6 +1883,178 @@
         // ═══════════════════════════════════════════════════════
         function skipTier() {
             showTierReview();
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // MANUAL SET MODE
+        // ═══════════════════════════════════════════════════════
+        let manualState = null;
+        let manualCurrentTier = 1;
+
+        function startManualSet() {
+            // Build ordered list of all items sorted by tier then name
+            const sortedItems = [...ITEMS_DB].sort((a, b) => {
+                if (a.tier !== b.tier) return a.tier - b.tier;
+                return a.name.localeCompare(b.name);
+            });
+
+            manualState = {
+                items: sortedItems,
+                currentIndex: 0,
+                finalAdjustments: []
+            };
+
+            // Ensure draftState is ready so showStats works
+            draftState = initDraftState();
+
+            showPage('page-manual-set');
+            buildManualTierDots();
+            renderManualItem();
+        }
+
+        function buildManualTierDots() {
+            const container = document.getElementById('manual-tier-dots');
+            container.innerHTML = '';
+            for (let t = 1; t <= TOTAL_TIERS; t++) {
+                const dot = document.createElement('div');
+                dot.className = 'tier-dot';
+                dot.title = `Tier ${t}`;
+                dot.id = `manual-tier-dot-${t}`;
+                container.appendChild(dot);
+            }
+            updateManualTierDots();
+        }
+
+        function updateManualTierDots() {
+            if (!manualState) return;
+            const currentItem = manualState.items[manualState.currentIndex];
+
+            // Count items per tier and processed items per tier
+            const tierTotal = {};
+            const tierDone = {};
+            manualState.items.forEach((item, idx) => {
+                tierTotal[item.tier] = (tierTotal[item.tier] || 0) + 1;
+                if (idx < manualState.currentIndex) {
+                    tierDone[item.tier] = (tierDone[item.tier] || 0) + 1;
+                }
+            });
+
+            for (let t = 1; t <= TOTAL_TIERS; t++) {
+                const dot = document.getElementById(`manual-tier-dot-${t}`);
+                if (!dot) continue;
+                dot.className = 'tier-dot';
+                const total = tierTotal[t] || 0;
+                const done = tierDone[t] || 0;
+                if (total > 0 && done >= total) {
+                    dot.classList.add('done');
+                } else if (currentItem && currentItem.tier === t) {
+                    dot.classList.add('active');
+                }
+            }
+        }
+
+        function renderManualItem() {
+            if (!manualState) return;
+            const { items, currentIndex } = manualState;
+
+            if (currentIndex >= items.length) {
+                finishManualSet();
+                return;
+            }
+
+            const item = items[currentIndex];
+            manualCurrentTier = item.tier; // reset to original tier for each item
+
+            // Progress bar
+            const pct = Math.round((currentIndex / items.length) * 100);
+            document.getElementById('manual-progress-fill').style.width = pct + '%';
+            document.getElementById('manual-progress-text').textContent = `${currentIndex + 1} / ${items.length}`;
+
+            // Header tier badge (shows base tier of current item)
+            document.getElementById('manual-tier-num').textContent = item.tier;
+
+            // Icon
+            const img = document.getElementById('manual-item-icon');
+            const fallback = document.getElementById('manual-item-fallback');
+            img.src = getIconPath(item.name);
+            img.alt = item.name;
+            img.style.display = '';
+            fallback.style.display = 'none';
+
+            // Tier display (editable)
+            document.getElementById('manual-item-tier-display').textContent = 'TIER ' + manualCurrentTier;
+
+            // Name
+            document.getElementById('manual-item-name').textContent = item.name;
+
+            // Description (colorized, same palette as draft mode)
+            let out = item.description.replace(/\n/g, '<br>');
+            const greens = ["acidic","channel","groooooowth","growth","inspired","poison","plague","rite","weaken","undergrowth"];
+            const reds = ["bloodlust","eliminate","evil","flesh","lucky","mandatory","pain","regen"];
+            const blues = ["boost","charged","duel","duplicate","echo","era","fizz","manaGain","picky","stasis"];
+            const purples = ["deathwish","decay","exert","inflictexert","manacost","possessed","potion","rampage","singleCast","sticky","terminal"];
+            const oranges = ["cooldown","cruel","deplete","doubleUse","focus","guilt","hoard","quadUse","repel","resilient","singleUse","sixth","sprint","tall","threesy","vulnerable"];
+            const yellows = ["critical","defy","dog","dogma","ego","engage","fierce","heavy","lead","overdog","petrify","reborn","rescue","spellRescue","underdog"];
+            const colorize = (words, color) => {
+                const regex = new RegExp('\\b(' + words.join('|') + ')\\b', 'g');
+                out = out.replace(regex, `<span style="color:${color};">$1</span>`);
+            };
+            colorize(greens, '#388044');
+            colorize(reds, '#AD1F1F');
+            colorize(blues, '#217B91');
+            colorize(purples, '#6A4484');
+            colorize(oranges, '#C45E16');
+            colorize(yellows, '#B59E09');
+            document.getElementById('manual-item-desc').innerHTML = out;
+
+            updateManualTierDots();
+        }
+
+        function adjustManualTier(delta) {
+            const newTier = manualCurrentTier + delta;
+            if (newTier < 1 || newTier > TOTAL_TIERS) return;
+            manualCurrentTier = newTier;
+            document.getElementById('manual-item-tier-display').textContent = 'TIER ' + manualCurrentTier;
+        }
+
+        function confirmManualItem() {
+            if (!manualState) return;
+            const item = manualState.items[manualState.currentIndex];
+            if (!item) return;
+
+            // Record adjustment only if tier changed
+            if (manualCurrentTier !== item.tier) {
+                const type = manualCurrentTier > item.tier ? 'nerf' : 'buff';
+                manualState.finalAdjustments.push({
+                    name: item.name,
+                    tier: item.tier,
+                    newTier: manualCurrentTier,
+                    type: type
+                });
+            }
+
+            manualState.currentIndex++;
+            renderManualItem();
+        }
+
+        function manualSkipItem() {
+            if (!manualState) return;
+            // Keep original tier, just advance
+            manualState.currentIndex++;
+            renderManualItem();
+        }
+
+        function finishManualSet() {
+            // Feed into draftState so showStats renders correctly
+            draftState = initDraftState();
+            draftState.finalAdjustments = manualState.finalAdjustments;
+            manualState = null;
+            showStats(false);
+        }
+
+        function confirmExitManualSet() {
+            manualState = null;
+            showPage('page-items-info');
         }
 
         function startDraft() {
