@@ -674,27 +674,43 @@
         /* ─── Progress Bar ─── */
         .progress-bar-wrap {
             flex: 1;
-            min-width: 120px;
-            max-width: 200px;
+            min-width: 160px;
+            max-width: 300px;
         }
 
         .progress-bar-track {
-            height: 4px;
+            height: 8px;
             background: var(--border);
             position: relative;
+            border-radius: 4px;
+            overflow: hidden;
         }
 
         .progress-bar-fill {
             height: 100%;
             background: var(--accent);
             transition: width 0.3s;
+            border-radius: 4px;
         }
 
         .progress-text {
-            font-size: 10px;
-            color: var(--text-muted);
-            margin-top: 4px;
+            font-size: 12px;
+            color: var(--text-dim);
+            margin-top: 6px;
             text-align: right;
+            letter-spacing: 1px;
+        }
+
+        /* ─── Tier-button shine animation ─── */
+        @keyframes tierBtnShine {
+            0%   { border-color: var(--border-lit); box-shadow: none; }
+            30%  { border-color: var(--accent2); box-shadow: 0 0 12px var(--accent), 0 0 4px var(--accent2); color: var(--accent2); }
+            60%  { border-color: var(--accent); box-shadow: 0 0 20px var(--accent); color: var(--accent); }
+            100% { border-color: var(--border-lit); box-shadow: none; color: var(--text); }
+        }
+
+        .manual-tier-btn.shine {
+            animation: tierBtnShine 1s ease-in-out 0.4s both;
         }
 
         /* ─── Tier Progress Dots ─── */
@@ -1622,8 +1638,8 @@
             <div class="manual-header-left">
                 <button class="btn btn-ghost" style="padding:6px 14px;font-size:11px;" onclick="confirmExitManualSet()">←
                     EXIT</button>
-                <button class="btn btn-ghost" id="btn-manual-skip-header" onclick="manualSkipItem()"
-                    style="padding:6px 14px;font-size:11px;margin-left:8px;display:none;">SKIP ITEM</button>
+                <button class="btn btn-ghost" id="btn-manual-skip-header" onclick="manualSkipTier()"
+                    style="padding:6px 14px;font-size:11px;margin-left:8px;display:none;">SKIP TIER 1</button>
                 <div class="draft-tier-badge">TIER <span id="manual-tier-num">1</span></div>
             </div>
             <div class="manual-header-right">
@@ -1639,7 +1655,6 @@
 
         <!-- Main item area -->
         <div class="manual-arena" id="manual-arena">
-            <div class="draft-prompt">// SET ITEM TIER //</div>
 
             <div class="manual-set-item-card" id="manual-item-card">
                 <!-- Icon -->
@@ -1651,9 +1666,9 @@
 
                 <!-- Tier controls (above name) -->
                 <div class="manual-tier-controls">
-                    <button class="manual-tier-btn" onclick="adjustManualTier(-1)">−</button>
+                    <button class="manual-tier-btn" id="manual-btn-minus" onclick="adjustManualTier(-1)">−</button>
                     <div class="manual-tier-display" id="manual-item-tier-display">TIER 1</div>
-                    <button class="manual-tier-btn" onclick="adjustManualTier(+1)">+</button>
+                    <button class="manual-tier-btn" id="manual-btn-plus" onclick="adjustManualTier(+1)">+</button>
                 </div>
 
                 <!-- Name -->
@@ -1665,8 +1680,8 @@
             </div>
 
             <button class="btn btn-accent manual-confirm-btn" onclick="confirmManualItem()">✔ CONFIRM &amp; NEXT ITEM →</button>
-            <button class="btn btn-ghost manual-confirm-btn" id="btn-manual-skip-arena" onclick="manualSkipItem()"
-                style="margin-top:4px;">SKIP THIS ITEM</button>
+            <button class="btn btn-ghost manual-confirm-btn" id="btn-manual-skip-arena" onclick="manualSkipTier()"
+                style="margin-top:4px;">SKIP TIER 1</button>
         </div>
 
     </section>
@@ -1909,7 +1924,7 @@
 
             showPage('page-manual-set');
             buildManualTierDots();
-            renderManualItem();
+            renderManualItem(true); // true = first item, trigger shine
         }
 
         function buildManualTierDots() {
@@ -1953,7 +1968,7 @@
             }
         }
 
-        function renderManualItem() {
+        function renderManualItem(isFirst = false) {
             if (!manualState) return;
             const { items, currentIndex } = manualState;
 
@@ -1972,6 +1987,11 @@
 
             // Header tier badge (shows base tier of current item)
             document.getElementById('manual-tier-num').textContent = item.tier;
+
+            // Update skip-tier button label on both header and arena
+            const skipLabel = 'SKIP TIER ' + item.tier;
+            document.getElementById('btn-manual-skip-header').textContent = skipLabel;
+            document.getElementById('btn-manual-skip-arena').textContent = skipLabel;
 
             // Icon
             const img = document.getElementById('manual-item-icon');
@@ -2008,6 +2028,20 @@
             document.getElementById('manual-item-desc').innerHTML = out;
 
             updateManualTierDots();
+
+            // First item: trigger shine animation on +/- buttons to hint interactivity
+            if (isFirst) {
+                const btnMinus = document.getElementById('manual-btn-minus');
+                const btnPlus  = document.getElementById('manual-btn-plus');
+                // Re-trigger animation by removing and re-adding class
+                [btnMinus, btnPlus].forEach(btn => {
+                    btn.classList.remove('shine');
+                    void btn.offsetWidth; // force reflow
+                    btn.classList.add('shine');
+                    // Clean up class after animation ends so hover styles work normally
+                    btn.addEventListener('animationend', () => btn.classList.remove('shine'), { once: true });
+                });
+            }
         }
 
         function adjustManualTier(delta) {
@@ -2037,10 +2071,16 @@
             renderManualItem();
         }
 
-        function manualSkipItem() {
+        function manualSkipTier() {
             if (!manualState) return;
-            // Keep original tier, just advance
-            manualState.currentIndex++;
+            // Skip all remaining items that belong to the same base tier as the current item
+            const currentTier = manualState.items[manualState.currentIndex].tier;
+            while (
+                manualState.currentIndex < manualState.items.length &&
+                manualState.items[manualState.currentIndex].tier === currentTier
+            ) {
+                manualState.currentIndex++;
+            }
             renderManualItem();
         }
 
