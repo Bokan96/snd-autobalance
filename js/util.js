@@ -1,7 +1,9 @@
 // Shared constants and helpers used across all pages.
 
 // ── Draft tuning ─────────────────────────────────────────
-const TOTAL_TIERS = 9;
+const TOTAL_TIERS = 9;          // draftable tiers 1-9
+const MIN_TIER = 0;             // lowest tier an item can be buffed to
+const MAX_TIER = 10;            // highest tier an item can be nerfed to
 const DEFAULT_ELO = 1200;
 const K_FACTOR = 32;
 const ROUNDS_PER_TIER = 30;     // max draft rounds before the tier review

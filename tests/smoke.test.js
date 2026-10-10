@@ -237,6 +237,41 @@ test('manual set: exports the exact tier chosen, including multi-tier moves', as
     await page.close();
 });
 
+test('manual set: tiers range from 0 to 10', async () => {
+    const page = await openApp();
+    await page.evaluate(() => startManualSet());
+    const currentItem = async () => {
+        const name = await page.evaluate(() => document.getElementById('manual-item-name').textContent);
+        return ITEMS_DB.find(i => i.name === name);
+    };
+    const shownTier = () => page.evaluate(() => document.getElementById('manual-item-tier-display').textContent);
+
+    // Tier 1 item: two buffs stop at tier 0
+    const low = await currentItem();
+    assert.equal(low.tier, 1);
+    await page.click('#manual-btn-minus');
+    await page.click('#manual-btn-minus');
+    assert.equal(await shownTier(), 'TIER 0');
+    await action(page, 'manual-confirm');
+
+    // Skip ahead to tier 9: two nerfs stop at tier 10
+    while ((await currentItem()).tier < 9) await action(page, 'manual-skip-tier');
+    const high = await currentItem();
+    await page.click('#manual-btn-plus');
+    await page.click('#manual-btn-plus');
+    assert.equal(await shownTier(), 'TIER 10');
+    await action(page, 'manual-confirm');
+    await page.evaluate(() => finishManualSet());
+
+    await action(page, 'copy-mod');
+    await wait(50);
+    const tiers = parseItempool((await copied(page)).at(-1));
+    assertCompleteItempool(tiers);
+    assert.equal(tiers.get(low.name), 0);
+    assert.equal(tiers.get(high.name), 10);
+    await page.close();
+});
+
 test('hero analyzer: analyzes the sample and treats pasted names as text', async () => {
     const page = await openApp();
     await page.evaluate(() => showPage('page-paste'));

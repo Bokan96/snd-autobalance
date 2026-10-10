@@ -26,7 +26,7 @@ After each tier, the items are listed by Elo with draggable separators. On touch
 The top 5 items start in the nerf zone and the bottom 5 in the buff zone, except in tier 1, where nothing starts as a buff. Nerfed items carry into the next tier's draft with a fresh Elo rating. **Skip to results** ends the draft early.
 
 ### ✏️ Manual set
-Step through every item in tier order and set its tier with **− / +**. You can skip the rest of a tier.
+Step through every item in tier order and set its tier (0–10) with **− / +**. You can skip the rest of a tier.
 
 ### 📋 Community balance mod
 This copies a preset of community-agreed tier changes and shows them on the results page.
@@ -112,7 +112,7 @@ npm test
 
 ## License
 
-This project is open source and available for personal use.
+[MIT](LICENSE). The game data and icons in `guides/` and `icons/` come from the community tier list and the game itself, and are not covered by this license.
 
 ---
 

@@ -103,7 +103,7 @@ function renderManualItem(isFirst = false) {
 
 function adjustManualTier(delta) {
     const newTier = manualCurrentTier + delta;
-    if (newTier < 1 || newTier > TOTAL_TIERS) return;
+    if (newTier < MIN_TIER || newTier > MAX_TIER) return;
     manualCurrentTier = newTier;
     document.getElementById('manual-item-tier-display').textContent = 'TIER ' + manualCurrentTier;
 }
