@@ -7,6 +7,9 @@ Output:
 """
 import zipfile, xml.etree.ElementTree as ET, os, re
 
+# Run relative to the repo root regardless of the caller's cwd
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 XLSX = 'guides/Slice and Dice 3.1 Unfair Tier list.xlsx'
 z = zipfile.ZipFile(XLSX)
 

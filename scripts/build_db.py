@@ -1,7 +1,11 @@
+import os
 import pandas as pd
 import json
 
-df_h = pd.read_csv('heroes.csv', skiprows=4, header=None)
+# Run relative to the repo root regardless of the caller's cwd
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+df_h = pd.read_csv('data/heroes.csv', skiprows=4, header=None)
 df_h = df_h[df_h[3].notnull()]
 
 heroes = []
@@ -21,7 +25,7 @@ for idx, row in df_h.iterrows():
         "color": color
     })
 
-df_i = pd.read_csv('items.csv', skiprows=8, header=None)
+df_i = pd.read_csv('data/items.csv', skiprows=8, header=None)
 df_i = df_i[df_i[0].notnull()]
 
 items = []
@@ -44,5 +48,5 @@ db = {
     "items": items
 }
 
-with open('database.json', 'w', encoding='utf-8') as f:
+with open('data/database.json', 'w', encoding='utf-8') as f:
     json.dump(db, f, indent=4)
