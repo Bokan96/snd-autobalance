@@ -86,12 +86,15 @@ function showStats() {
     grid.innerHTML = sortedTiers.map(tier => {
         const itemsHtml = groups[tier].map(adj => {
             const newTier = adjustmentToTier(adj);
-            const color = newTier > adj.tier ? '#e53935' : '#4caf50'; // nerf : buff
-            const tierLabel = `<span style="font-size:13px;"><s style="color:#888;">Tier ${adj.tier}</s> → Tier ${newTier}</span>`;
+            const isNerf = newTier > adj.tier;
+            const color = isNerf ? '#e53935' : '#4caf50';
+            // Arrow + title so nerf/buff isn't conveyed by colour alone
+            const marker = isNerf ? '<span title="Nerf">▲</span>' : '<span title="Buff">▼</span>';
+            const tierLabel = `<span style="font-size:13px;"><s style="color:#888;">Tier ${adj.tier}</s> → Tier ${newTier} ${marker}</span>`;
 
             return `
             <div style="display:flex; align-items:center; gap:10px; padding:6px 0; border-bottom:1px solid var(--border);">
-                <img src="${escapeHtml(getIconPath(adj.name))}" style="width:24px;height:24px;object-fit:contain;flex-shrink:0;" data-hide-on-error>
+                <img src="${escapeHtml(getIconPath(adj.name))}" alt="" loading="lazy" style="width:24px;height:24px;object-fit:contain;flex-shrink:0;" data-hide-on-error>
                 <span style="color:${color}; font-size:14px; font-weight:bold; flex:1;">${escapeHtml(adj.name)}</span>
                 <span style="color:${color}; font-weight:bold;">${tierLabel}</span>
             </div>

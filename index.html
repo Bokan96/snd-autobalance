@@ -8,6 +8,7 @@
     <meta name="description"
         content="Autobalance tool for Slice and Dice — track item pick rates and get balancing recommendations through a draft mode.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -26,7 +27,7 @@
 
         <div class="landing-modes">
             <!-- Items — active -->
-            <div class="mode-card" id="btn-items-mode" data-action="show-page" data-page="page-items-info">
+            <div class="mode-card" id="btn-items-mode" role="button" tabindex="0" data-action="show-page" data-page="page-items-info">
                 <span class="mode-card__badge badge-ready">ACTIVE</span>
                 <span class="mode-card__icon">⚗️</span>
                 <div class="mode-card__title">Autobalance Items</div>
@@ -36,7 +37,7 @@
             </div>
 
             <!-- Heroes — disabled -->
-            <div class="mode-card mode-card--disabled">
+            <div class="mode-card mode-card--disabled" aria-disabled="true">
                 <span class="mode-card__badge badge-soon">COMING SOON</span>
                 <span class="mode-card__icon">🗡️</span>
                 <div class="mode-card__title">Autobalance Heroes</div>
@@ -132,7 +133,7 @@
             </div>
             <div class="draft-header-right">
                 <button class="btn btn-ghost" style="padding:6px 12px;font-size:13px;" data-action="show-rankings"
-                    title="Current Tier Elo Rankings">📊</button>
+                    title="Current Tier Elo Rankings" aria-label="Current tier Elo rankings" aria-haspopup="dialog">📊</button>
                 <div class="tier-dots" id="tier-dots"></div>
                 <div class="progress-bar-wrap">
                     <div class="progress-bar-track">
@@ -149,7 +150,7 @@
 
             <div class="draft-cards" id="draft-cards">
                 <!-- Item A -->
-                <div class="item-card" id="item-card-a" data-action="pick" data-side="0">
+                <div class="item-card" id="item-card-a" role="button" tabindex="0" data-action="pick" data-side="0">
                     <span class="item-card__hotkey">[ A ]</span>
                     <div class="item-card__icon-wrap">
                         <img id="item-icon-a" alt="" data-fallback>
@@ -164,7 +165,7 @@
                 <div class="draft-vs">VS</div>
 
                 <!-- Item B -->
-                <div class="item-card" id="item-card-b" data-action="pick" data-side="1">
+                <div class="item-card" id="item-card-b" role="button" tabindex="0" data-action="pick" data-side="1">
                     <span class="item-card__hotkey">[ S ]</span>
                     <div class="item-card__icon-wrap">
                         <img id="item-icon-b" alt="" data-fallback>
@@ -179,7 +180,7 @@
                 <div class="draft-vs">VS</div>
 
                 <!-- Item C -->
-                <div class="item-card" id="item-card-c" data-action="pick" data-side="2">
+                <div class="item-card" id="item-card-c" role="button" tabindex="0" data-action="pick" data-side="2">
                     <span class="item-card__hotkey">[ D ]</span>
                     <div class="item-card__icon-wrap">
                         <img id="item-icon-c" alt="" data-fallback>
@@ -248,9 +249,9 @@
 
                 <!-- Tier controls (above name) -->
                 <div class="manual-tier-controls">
-                    <button class="manual-tier-btn" id="manual-btn-minus" data-action="manual-adjust" data-delta="-1">−</button>
+                    <button class="manual-tier-btn" id="manual-btn-minus" data-action="manual-adjust" data-delta="-1" aria-label="Lower tier (buff)">−</button>
                     <div class="manual-tier-display" id="manual-item-tier-display">TIER 1</div>
-                    <button class="manual-tier-btn" id="manual-btn-plus" data-action="manual-adjust" data-delta="1">+</button>
+                    <button class="manual-tier-btn" id="manual-btn-plus" data-action="manual-adjust" data-delta="1" aria-label="Higher tier (nerf)">+</button>
                 </div>
 
                 <!-- Name -->
@@ -281,8 +282,7 @@
             <!-- Session Results -->
             <div class="stats-section">
                 <h2>📋 Tier Adjustments</h2>
-                <div id="stats-adjustments-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+                <div id="stats-adjustments-grid">
                 </div>
             </div>
 
@@ -297,14 +297,12 @@
     </section>
 
     <!-- Rankings Modal -->
-    <div id="rankings-modal" class="hidden"
-        style="position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9999;display:flex;align-items:center;justify-content:center;">
-        <div
-            style="background:var(--surface,#1e1e1e);border:1px solid var(--border,#333);border-radius:14px;padding:24px 20px;width:340px;max-height:80vh;display:flex;flex-direction:column;gap:12px;">
+    <div id="rankings-modal" class="hidden">
+        <div class="rankings-dialog" role="dialog" aria-modal="true" aria-labelledby="rankings-title">
             <div style="display:flex;align-items:center;justify-content:space-between;">
-                <h3 style="margin:0;font-size:15px;letter-spacing:1px;">CURRENT TIER RANKINGS</h3>
+                <h3 id="rankings-title" style="margin:0;font-size:15px;letter-spacing:1px;">CURRENT TIER RANKINGS</h3>
                 <button class="btn btn-ghost" style="padding:4px 10px;font-size:12px;"
-                    data-action="close-rankings">✕</button>
+                    data-action="close-rankings" aria-label="Close rankings">✕</button>
             </div>
             <div id="rankings-list" style="overflow-y:auto;max-height:60vh;display:flex;flex-direction:column;gap:4px;">
             </div>

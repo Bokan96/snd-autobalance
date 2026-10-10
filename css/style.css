@@ -1095,3 +1095,58 @@ textarea:focus {
         display: inline-block !important;
     }
 }
+
+/* ─── Keyboard focus ─── */
+.btn:focus-visible,
+.manual-tier-btn:focus-visible,
+[role="button"]:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ─── Rankings modal ─── */
+#rankings-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rankings-dialog {
+    background: var(--surface, #1e1e1e);
+    border: 1px solid var(--border, #333);
+    border-radius: 14px;
+    padding: 24px 20px;
+    width: min(340px, calc(100% - 32px));
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ─── Results grid ─── */
+#stats-adjustments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    gap: 16px;
+}
+
+/* ─── Narrow screens: header controls share one full-width row ─── */
+@media (max-width: 600px) {
+    .draft-header,
+    .manual-header {
+        padding: 12px 16px;
+    }
+
+    .draft-header-right,
+    .manual-header-right {
+        width: 100%;
+    }
+
+    .progress-bar-wrap {
+        min-width: 0;
+    }
+}

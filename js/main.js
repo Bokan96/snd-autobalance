@@ -41,7 +41,19 @@ document.getElementById('rankings-modal').addEventListener('click', e => {
     if (e.target === e.currentTarget) closeTierRankings();
 });
 
-document.addEventListener('keydown', handleDraftKeydown);
+document.addEventListener('keydown', e => {
+    // Clickable cards (role="button") respond to Enter/Space like real buttons
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('[role="button"][data-action]')) {
+        e.preventDefault();
+        e.target.click();
+        return;
+    }
+    if (e.key === 'Escape' && !document.getElementById('rankings-modal').classList.contains('hidden')) {
+        closeTierRankings();
+        return;
+    }
+    handleDraftKeydown(e);
+});
 
 // Image load failures (error events don't bubble, so listen in the capture phase):
 //   data-fallback      → hide the image and show the sibling placeholder icon

@@ -27,9 +27,11 @@ function showTierReview() {
         el.draggable = true;
         el.dataset.name = item.name;
         const icon = document.createElement('img');
-        icon.src = getIconPath(item.name);
         icon.className = 'review-item-icon';
+        icon.alt = ''; // decorative: the name is next to it
+        icon.loading = 'lazy';
         icon.dataset.hideOnError = '';
+        icon.src = getIconPath(item.name);
         const nameSpan = document.createElement('span');
         nameSpan.style.flex = '1';
         nameSpan.textContent = item.name;
@@ -207,13 +209,19 @@ function showTierRankings() {
             el.style.borderColor = 'var(--accent)';
             el.style.boxShadow = '0 0 6px rgba(200,168,75,0.15)';
         }
-        el.innerHTML = '<span>' + (index + 1) + '. <img src="' + escapeHtml(getIconPath(item.name)) + '" style="width:18px;height:18px;vertical-align:middle;margin:0 6px 0 2px;" data-hide-on-error>' + escapeHtml(item.name) + '</span>'
+        el.innerHTML = '<span>' + (index + 1) + '. <img src="' + escapeHtml(getIconPath(item.name)) + '" alt="" loading="lazy" style="width:18px;height:18px;vertical-align:middle;margin:0 6px 0 2px;" data-hide-on-error>' + escapeHtml(item.name) + '</span>'
             + '<span style="color:var(--accent);">' + eloOf(item.name) + ' Elo</span>';
         list.appendChild(el);
     });
+    rankingsOpener = document.activeElement;
     document.getElementById('rankings-modal').classList.remove('hidden');
+    document.querySelector('#rankings-modal [data-action="close-rankings"]').focus();
 }
+
+let rankingsOpener = null; // element to refocus when the modal closes
 
 function closeTierRankings() {
     document.getElementById('rankings-modal').classList.add('hidden');
+    if (rankingsOpener && rankingsOpener.focus) rankingsOpener.focus();
+    rankingsOpener = null;
 }
