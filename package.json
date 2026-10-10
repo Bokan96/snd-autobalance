@@ -2,6 +2,7 @@
   "name": "snd-autobalance",
   "private": true,
   "description": "Slice and Dice item autobalance tool (static site). npm is only used for the browser smoke tests.",
+  "license": "MIT",
   "scripts": {
     "test": "node --test tests/smoke.test.js"
   },
