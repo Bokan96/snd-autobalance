@@ -1,0 +1,11 @@
+{
+  "name": "snd-autobalance",
+  "private": true,
+  "description": "Slice and Dice item autobalance tool (static site). npm is only used for the browser smoke tests.",
+  "scripts": {
+    "test": "node --test tests/smoke.test.js"
+  },
+  "devDependencies": {
+    "puppeteer-core": "23.11.1"
+  }
+}

@@ -5,3 +5,4 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+node_modules/

@@ -38,6 +38,8 @@ The results page groups every adjustment by original tier (▲ nerf, ▼ buff). 
 =itempool.Anchor.n.Anchor.tier.2+Arrow.n.Arrow.tier.1+...
 ```
 
+Tiers range from 0 to 10, so a tier 1 item can be buffed to 0 and a tier 9 item nerfed to 10. Every export also includes the tier 0 items listed in [js/data/tier0_items.js](js/data/tier0_items.js), unchanged at tier 0.
+
 ### 📋 Hero pick-rate analyzer
 Under **Paste pick rate** on the items page, paste the game's `pickRates` JSON. The tool lists your most- and least-picked heroes and builds a hero pool with suffixes added to them.
 
@@ -78,10 +80,12 @@ js/
   data/
     items.js          ITEMS_DB (generated, see below)
     balances.js       community balance preset
+    tier0_items.js    tier 0 items appended to every export
     hero_suffixes.js  hero pool suffixes
 icons/                hero and item icons (extracted from the spreadsheet)
 data/                 CSV/JSON exports of the tier list
 scripts/              data pipeline (Python)
+tests/                browser smoke tests
 guides/               source spreadsheet and modding references
 ```
 
@@ -96,6 +100,15 @@ python scripts/extract_icons.py    # re-extracts icons
 ```
 
 See [scripts/README.md](scripts/README.md) for details.
+
+## Tests
+
+The smoke tests drive the app in headless Chrome. They play a full draft, manual set, community balance and the hero analyzer, and check keyboard access and phone-width layout. They need Node 18+ and a local Chrome. Set `CHROME_PATH` if Chrome isn't found.
+
+```bash
+npm install
+npm test
+```
 
 ## License
 
