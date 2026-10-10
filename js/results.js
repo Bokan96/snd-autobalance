@@ -18,14 +18,17 @@ function latestAdjustments(adjustments) {
     return seen;
 }
 
-// =itempool textmod with each item at its base tier, or the tier from tierOverrides
+// =itempool textmod with each item at its base tier, or the tier from tierOverrides,
+// followed by the tier 0 items (never adjusted)
 function buildItempoolString(tierOverrides) {
-    return '=itempool.' + ITEMS_DB.map(item => {
+    const entries = ITEMS_DB.map(item => {
         const effectiveTier = tierOverrides.hasOwnProperty(item.name)
             ? tierOverrides[item.name]
             : item.tier;
         return `${item.name}.n.${item.name}.tier.${effectiveTier}`;
-    }).join('+');
+    });
+    TIER0_ITEMS.forEach(name => entries.push(`${name}.n.${name}.tier.0`));
+    return '=itempool.' + entries.join('+');
 }
 
 // ── Textmod export ───────────────────────────────────────

@@ -30,5 +30,5 @@ the next rebuild will overwrite it.
 
 - `data/heroes.csv` and `data/items.csv` are CSV exports of the hero and item
   sheets. No script in this repo produces them.
-- `js/data/balances.js` (community balance tiers) and `js/data/hero_suffixes.js`
-  are maintained by hand.
+- `js/data/balances.js` (community balance tiers), `js/data/tier0_items.js` (tier 0
+  items added to every export) and `js/data/hero_suffixes.js` are maintained by hand.
