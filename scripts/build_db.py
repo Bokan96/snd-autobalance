@@ -11,12 +11,15 @@ df_h = df_h[df_h[3].notnull()]
 heroes = []
 for idx, row in df_h.iterrows():
     color = str(row[0]).strip().lower()
-    if color not in ['orange', 'yellow', 'gray', 'red', 'blue', 'green']:
+    if color == 'gray':
+        color = 'grey'
+    # The sheet spells it "Grey"; Violet is the special hero Glitch
+    if color not in ['orange', 'yellow', 'grey', 'red', 'blue', 'green', 'violet']:
         continue
     tier_val = str(row[1]).strip()
     try:
         tier = int(float(tier_val))
-    except:
+    except ValueError:
         tier = 0
         
     heroes.append({

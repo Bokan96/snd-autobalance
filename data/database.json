@@ -221,6 +221,106 @@
             "color": "yellow"
         },
         {
+            "name": "Defender",
+            "tier": 1,
+            "color": "grey"
+        },
+        {
+            "name": "Buckle",
+            "tier": 1,
+            "color": "grey"
+        },
+        {
+            "name": "Squire",
+            "tier": 1,
+            "color": "grey"
+        },
+        {
+            "name": "Alloy",
+            "tier": 1,
+            "color": "grey"
+        },
+        {
+            "name": "Wallop",
+            "tier": 1,
+            "color": "grey"
+        },
+        {
+            "name": "Knight",
+            "tier": 2,
+            "color": "grey"
+        },
+        {
+            "name": "Warden",
+            "tier": 2,
+            "color": "grey"
+        },
+        {
+            "name": "Armorer",
+            "tier": 2,
+            "color": "grey"
+        },
+        {
+            "name": "Monk",
+            "tier": 2,
+            "color": "grey"
+        },
+        {
+            "name": "Cleric",
+            "tier": 2,
+            "color": "grey"
+        },
+        {
+            "name": "Guardian",
+            "tier": 2,
+            "color": "grey"
+        },
+        {
+            "name": "Bard",
+            "tier": 2,
+            "color": "grey"
+        },
+        {
+            "name": "Pilgrim",
+            "tier": 2,
+            "color": "grey"
+        },
+        {
+            "name": "Valkyrie",
+            "tier": 3,
+            "color": "grey"
+        },
+        {
+            "name": "Keeper",
+            "tier": 3,
+            "color": "grey"
+        },
+        {
+            "name": "Prince",
+            "tier": 3,
+            "color": "grey"
+        },
+        {
+            "name": "Stoic",
+            "tier": 3,
+            "color": "grey"
+        },
+        {
+            "name": "Stalwart",
+            "tier": 3,
+            "color": "grey"
+        },
+        {
+            "name": "Poet",
+            "tier": 3,
+            "color": "grey"
+        },
+        {
+            "name": "Paladin",
+            "tier": 3,
+            "color": "grey"
+        },
+        {
             "name": "Healer",
             "tier": 1,
             "color": "red"
@@ -544,6 +644,11 @@
             "name": "Tw1n",
             "tier": 3,
             "color": "green"
+        },
+        {
+            "name": "Glitch",
+            "tier": -1,
+            "color": "violet"
         }
     ],
     "items": [
