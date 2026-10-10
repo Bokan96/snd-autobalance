@@ -929,6 +929,7 @@
             font-size: 12px;
             color: var(--text-dim);
             margin-bottom: 32px;
+            white-space: pre-line;
         }
 
         .tier-summary-grid {
@@ -1733,6 +1734,19 @@
         const DEFAULT_ELO = 1200;
         const K_FACTOR = 32;
 
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function escapeRegExp(str) {
+            return String(str).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
         function loadPersistentStats() {
             let stats = {};
             try {
@@ -1807,6 +1821,7 @@
                 nerf2CarryOvers: [],  // Items buffed -2 tiers (carry 2 tiers ahead)
                 finalAdjustments: [], // Tracks all nerfs and buffs for final results
                 items: {},   // name -> { offered, picked, skipped }
+                locked: false, // true between a pick and the next triplet being shown
                 pairA: null,
                 pairB: null,
                 pairC: null
@@ -1896,7 +1911,12 @@
         // ═══════════════════════════════════════════════════════
         // DRAFT UI
         // ═══════════════════════════════════════════════════════
+        function isTierReviewOpen() {
+            return document.getElementById('tier-transition').classList.contains('active');
+        }
+
         function skipTier() {
+            if (!draftState || draftState.locked || isTierReviewOpen()) return;
             showTierReview();
         }
 
@@ -2143,6 +2163,7 @@
             draftState.pairA = a;
             draftState.pairB = b;
             draftState.pairC = c;
+            draftState.locked = false;
 
             // Update header
             document.getElementById('draft-tier-num').textContent = tier;
@@ -2235,6 +2256,10 @@
         }
 
         function pickItem(side) {
+            // Ignore picks while the previous one is animating or the review overlay is open
+            if (!draftState || draftState.locked || isTierReviewOpen()) return;
+            draftState.locked = true;
+
             const items = [draftState.pairA, draftState.pairB, draftState.pairC];
             const pickedItem = items[side];
             const skippedItems = items.filter((_, i) => i !== side);
@@ -2405,13 +2430,17 @@
                     }
                 });
             });
-            container.addEventListener('dragover', e => {
-                e.preventDefault();
-                const after = getDragAfterElement(container, e.clientY);
-                const dragging = document.querySelector('.dragging');
-                if (!dragging) return;
-                after ? container.insertBefore(dragging, after) : container.appendChild(dragging);
-            });
+            // The container persists across tiers, so only attach this once
+            if (!container.dataset.dragoverBound) {
+                container.dataset.dragoverBound = '1';
+                container.addEventListener('dragover', e => {
+                    e.preventDefault();
+                    const dragging = container.querySelector('.dragging');
+                    if (!dragging) return;
+                    const after = getDragAfterElement(container, e.clientY);
+                    after ? container.insertBefore(dragging, after) : container.appendChild(dragging);
+                });
+            }
         }
 
         function getDragAfterElement(container, y) {
@@ -2507,7 +2536,7 @@
                     el.style.borderColor = 'var(--accent)';
                     el.style.boxShadow = '0 0 6px rgba(200,168,75,0.15)';
                 }
-                el.innerHTML = '<span>' + (index + 1) + '. <img src="icons/items/' + item.name + '.png" style="width:18px;height:18px;vertical-align:middle;margin:0 6px 0 2px;" onerror="this.style.display=\'none\'">' + item.name + '</span>'
+                el.innerHTML = '<span>' + (index + 1) + '. <img src="' + escapeHtml(getIconPath(item.name)) + '" style="width:18px;height:18px;vertical-align:middle;margin:0 6px 0 2px;" onerror="this.style.display=\'none\'">' + escapeHtml(item.name) + '</span>'
                     + '<span style="color:var(--accent);">' + pStats[item.name].eloBest + ' Elo</span>';
                 list.appendChild(el);
             });
@@ -2525,7 +2554,9 @@
                 const seen = new Map();
                 draftState.finalAdjustments.forEach(adj => seen.set(adj.name, adj));
                 seen.forEach((adj, name) => {
-                    if (adj.type === 'nerf') adjustedTiers[name] = adj.tier + 1;
+                    // Manual and community adjustments carry an explicit target tier
+                    if (adj.newTier !== undefined) adjustedTiers[name] = adj.newTier;
+                    else if (adj.type === 'nerf') adjustedTiers[name] = adj.tier + 1;
                     else if (adj.type === 'buff') adjustedTiers[name] = adj.tier - 1;
                     else if (adj.type === 'buff2') adjustedTiers[name] = adj.tier - 2;
                 });
@@ -2580,6 +2611,27 @@
                 return `${item.name}.n.${item.name}.tier.${effectiveTier}`;
             }).join('+');
 
+            // Generate finalAdjustments representation for community balances
+            draftState = initDraftState();
+            draftState.finalAdjustments = [];
+
+            ITEMS_DB.forEach(item => {
+                if (COMMUNITY_BALANCES.hasOwnProperty(item.name)) {
+                    const newT = COMMUNITY_BALANCES[item.name];
+                    if (newT !== item.tier) {
+                        draftState.finalAdjustments.push({
+                            name: item.name,
+                            tier: item.tier,
+                            newTier: newT,
+                            type: newT > item.tier ? 'nerf' : 'buff'
+                        });
+                    }
+                }
+            });
+
+            // Show the results whether or not the clipboard write succeeds
+            showStats(false);
+
             navigator.clipboard.writeText(str).then(() => {
                 const btn = document.getElementById('btn-copy-community');
                 const orig = btn.textContent;
@@ -2591,26 +2643,6 @@
                     btn.style.color = '';
                     btn.style.borderColor = '';
                 }, 2000);
-
-                // Generate finalAdjustments representation for community balances
-                draftState = initDraftState();
-                draftState.finalAdjustments = [];
-
-                ITEMS_DB.forEach(item => {
-                    if (COMMUNITY_BALANCES.hasOwnProperty(item.name)) {
-                        const newT = COMMUNITY_BALANCES[item.name];
-                        if (newT !== item.tier) {
-                            draftState.finalAdjustments.push({
-                                name: item.name,
-                                tier: item.tier,
-                                newTier: newT,
-                                type: newT > item.tier ? 'nerf' : 'buff'
-                            });
-                        }
-                    }
-                });
-
-                showStats(false);
             }).catch(() => {
                 alert('Copy failed — please copy manually:\n\n' + str);
             });
@@ -2665,8 +2697,8 @@
 
                         return `
                     <div style="display:flex; align-items:center; gap:10px; padding:6px 0; border-bottom:1px solid var(--border);">
-                        <img src="icons/items/${adj.name}.png" style="width:24px;height:24px;object-fit:contain;flex-shrink:0;" onerror="this.style.display='none'">
-                        <span style="color:${color}; font-size:14px; font-weight:bold; flex:1;">${adj.name}</span>
+                        <img src="${escapeHtml(getIconPath(adj.name))}" style="width:24px;height:24px;object-fit:contain;flex-shrink:0;" onerror="this.style.display='none'">
+                        <span style="color:${color}; font-size:14px; font-weight:bold; flex:1;">${escapeHtml(adj.name)}</span>
                         <span style="color:${color}; font-weight:bold;">${tierLabel}</span>
                     </div>
                 `;
@@ -2731,6 +2763,8 @@
         // KEYBOARD CONTROLS
         // ═══════════════════════════════════════════════════════
         document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey || e.metaKey || e.altKey) return;
+            if (!document.getElementById('rankings-modal').classList.contains('hidden')) return;
             if (document.getElementById('page-draft').classList.contains('active')) {
                 if (e.key === 'a' || e.key === 'A' || e.key === 'ArrowLeft') {
                     pickItem(0);
@@ -2768,14 +2802,14 @@
             topHeroes.forEach(hero => {
                 const heroLower = hero.name.toLowerCase();
                 const suffix = (typeof HERO_SUFFIXES !== 'undefined' && HERO_SUFFIXES[hero.name]?.topPick) || "TopPick";
-                const pattern = new RegExp(`\\+${heroLower}\\+`, 'g');
-                modifiedPool = modifiedPool.replace(pattern, `+${heroLower}.n.TopPick.${suffix}+`);
+                const pattern = new RegExp(`\\+${escapeRegExp(heroLower)}\\+`, 'g');
+                modifiedPool = modifiedPool.replace(pattern, () => `+${heroLower}.n.TopPick.${suffix}+`);
             });
             bottomHeroes.forEach(hero => {
                 const heroLower = hero.name.toLowerCase();
                 const suffix = (typeof HERO_SUFFIXES !== 'undefined' && HERO_SUFFIXES[hero.name]?.lowPick) || "LowPick";
-                const pattern = new RegExp(`\\+${heroLower}\\+`, 'g');
-                modifiedPool = modifiedPool.replace(pattern, `+${heroLower}.n.LowPick.${suffix}+`);
+                const pattern = new RegExp(`\\+${escapeRegExp(heroLower)}\\+`, 'g');
+                modifiedPool = modifiedPool.replace(pattern, () => `+${heroLower}.n.LowPick.${suffix}+`);
             });
             return modifiedPool;
         }
@@ -2830,13 +2864,13 @@
 
             const topRows = topHeroes.map((h, i) => `
         <div class="hero-row">
-            <span class="hero-name">${i + 1}. ${h.name}</span>
+            <span class="hero-name">${i + 1}. ${escapeHtml(h.name)}</span>
             <span class="hero-rate">${h.pickRate.toFixed(1)}%</span>
         </div>`).join('');
 
             const bottomRows = bottomHeroes.map((h, i) => `
         <div class="hero-row">
-            <span class="hero-name">${i + 1}. ${h.name}</span>
+            <span class="hero-name">${i + 1}. ${escapeHtml(h.name)}</span>
             <span class="hero-rate low">${h.pickRate.toFixed(1)}%</span>
         </div>`).join('');
 
@@ -2847,9 +2881,10 @@
         ${bottomRows}
         <h3 style="margin-top:20px;">📝 Modified Hero Pool</h3>
         <p style="font-size:11px;color:var(--text-dim);margin-bottom:10px;">Top 3 marked .n.TopPick, bottom 3 marked .n.LowPick</p>
-        <textarea readonly style="width:100%;min-height:120px;padding:10px;font-family:'Share Tech Mono',monospace;font-size:11px;background:var(--bg);border:2px solid var(--border);color:var(--text);resize:vertical;">${modifiedPool}</textarea>
+        <textarea readonly style="width:100%;min-height:120px;padding:10px;font-family:'Share Tech Mono',monospace;font-size:11px;background:var(--bg);border:2px solid var(--border);color:var(--text);resize:vertical;"></textarea>
         <button class="btn btn-accent" onclick="copyPool()" style="margin-top:10px;width:100%;">COPY TO CLIPBOARD</button>
     `;
+            outputDiv.querySelector('textarea').value = modifiedPool;
             outputDiv.classList.add('visible');
         }
 
